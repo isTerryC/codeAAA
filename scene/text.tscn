@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj6uice0yjcp2"]
+
+[ext_resource type="PackedScene" uid="uid://ckc1sg17rg3xr" path="res://addons/terminal/terminal_menu.tscn" id="1_lccv3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TerminalMenu" parent="." instance=ExtResource("1_lccv3")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -572.0
+offset_top = -323.0
+offset_right = 573.0
+offset_bottom = 322.0
+grow_horizontal = 1
+grow_vertical = 1
