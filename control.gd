@@ -3,12 +3,12 @@ extends Control
 # 定义矩阵的大小和随机数串的大小
 const ROWS = 10
 const COLS = 10
-const RANDOM_STR_LENGTH = 6
+const RANDOM_STR_LENGTH = 8
 const MAX_ERRORS = 3  # 最大错误次数
 const BUTTON_SIZE = 50  # 调整按钮大小为 50，按钮更小一点
 const FONT_SIZE = 30  # 设置数字字体大小
-const RANDOM_STR_FONT_SIZE = 40  # 设置随机数串的字体大小
-const GAME_TIP_FONT_SIZE = 30  # 设置游戏提示的字体大小
+const RANDOM_STR_FONT_SIZE = 30  # 设置随机数串的字体大小
+const GAME_TIP_FONT_SIZE = 20  # 设置游戏提示的字体大小
 
 # 存储数字矩阵的二维数组
 var matrix = []
@@ -40,19 +40,14 @@ var custom_font : Font = null
 # 游戏初始化
 func _ready():
 	# 加载自定义字体文件，确保路径正确
-	custom_font = load("res://fonts/Roboto-SemiBold.ttf")  # 使用 FontFile 类型来加载字体
+	custom_font = load("res://fonts/Roboto_SemiCondensed-ExtraBoldItalic.ttf")  # 使用 FontFile 类型来加载字体
 	if custom_font:
 		print("字体加载成功！")
 	else:
 		print("字体加载失败！")  # 如果字体加载失败，打印错误信息
 
 	# 初始化矩阵数据并生成随机数
-	matrix = []
-	for i in range(ROWS):
-		var row = []
-		for j in range(COLS):
-			row.append(randi_range(0, 99))  # 生成0到99之间的随机整数
-		matrix.append(row)
+	initialize_matrix_with_unique_numbers()
 
 	# 初始化随机数串
 	random_string = []
@@ -90,7 +85,7 @@ func _ready():
 
 	# 创建游戏提示标签，放在矩阵右侧
 	game_tip_label = Label.new()
-	game_tip_label.text = "游戏开始！点击数字。\n规则：从第一个数开始，然后随机数串下一个数在该行寻找并点击，\n下一个数在上一个数的所在列寻找并点击，下一个再次变为行内寻找，如此往复。"
+	game_tip_label.text = "游戏开始！点击数字。\n规则：从第一个数开始，然后随机数串下一个数在该行寻\n找并点击，下一个数在上一个数的所在列寻找并点击，\n下一个再次变为行内寻找，如此往复。"
 	game_tip_label.position = Vector2(COLS * BUTTON_SIZE + 40, 0)  # 将提示放在矩阵右侧
 	game_tip_label.custom_minimum_size = Vector2(300, 40)  # 设置提示的宽度
 	game_tip_label.add_theme_font_override("font", custom_font)  # 使用自定义字体
@@ -103,6 +98,26 @@ func _ready():
 	# 更新显示的数字串
 	random_str_label.text = "随机数串: " + str(random_string)
 
+# 初始化矩阵，确保所有数字唯一
+func initialize_matrix_with_unique_numbers():
+	var total_numbers = ROWS * COLS
+	var unique_numbers = []
+
+	# 生成一个包含 0 到 99 的所有数字的列表
+	for i in range(100):
+		unique_numbers.append(i)
+
+	# 打乱列表
+	unique_numbers.shuffle()
+
+	# 将打乱后的数字填充到矩阵中
+	matrix = []
+	for i in range(ROWS):
+		var row = []
+		for j in range(COLS):
+			row.append(unique_numbers[i * COLS + j])
+		matrix.append(row)
+
 # 替换随机数串中的数字
 func replace_random_string_with_matrix():
 	var row = 0  # 从第一行开始
@@ -114,10 +129,16 @@ func replace_random_string_with_matrix():
 		# 检查是否是连续替换同一个位置
 		if last_replacement_position == Vector2(row, col):
 			# 如果连续替换同一个位置，修改数字的位置
-			if col < COLS - 1:
-				col += 1  # 改为当前列的下一个位置
+			if i%2!=0:
+				if col < COLS - 1:
+					col += 1  # 改为当前列的下一个位置
+				else:
+					col = 0  # 如果已经是最后一列，跳回第一列
 			else:
-				col = 0  # 如果已经是最后一列，跳回第一列
+				if row < ROWS - 1:
+					row +=1
+				else:
+					row = 0
 			# 更新替换位置
 			last_replacement_position = Vector2(row, col)
 		else:
@@ -203,7 +224,7 @@ func show_game_over(message: String):
 	# 显示游戏结束消息
 	var game_over_label = Label.new()
 	game_over_label.text = message
-	game_over_label.position = Vector2(100, ROWS * BUTTON_SIZE + 50)
+	game_over_label.position = Vector2(100, ROWS * BUTTON_SIZE + 90)
 	game_over_label.custom_minimum_size = Vector2(300, 40)
 	game_over_label.add_theme_font_override("font", custom_font)  # 使用自定义字体
 	game_over_label.add_theme_font_size_override("font_size", GAME_TIP_FONT_SIZE)  # 设置结束提示字体大小
