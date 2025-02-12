@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhdeucyxt3xrs"]
+
+[ext_resource type="Script" path="res://Clash/Scripts/core/GUI/GUIViewManager.gd" id="1_s4cx2"]
+[ext_resource type="Script" path="res://Clash/Scripts/core/GUI/GUIViewConfig.gd" id="2_mtkme"]
+[ext_resource type="Script" path="res://Clash/Scripts/core/LaunchGame.gd" id="2_nemnx"]
+[ext_resource type="PackedScene" uid="uid://d23og7kw5eme6" path="res://Clash/Scenes/Scene-0/control.tscn" id="3_0f58c"]
+
+[sub_resource type="Resource" id="Resource_hqtvn"]
+script = ExtResource("2_mtkme")
+id = &"StartMenu"
+prefab = ExtResource("3_0f58c")
+
+[node name="game" type="Node"]
+
+[node name="GUIViewManager" type="Node" parent="." node_paths=PackedStringArray("GUIRoot")]
+unique_name_in_owner = true
+script = ExtResource("1_s4cx2")
+viewConfigList = Array[ExtResource("2_mtkme")]([SubResource("Resource_hqtvn")])
+GUIRoot = NodePath("../GUIRoot")
+
+[node name="GUIRoot" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LaunchGame" type="Node" parent="."]
+script = ExtResource("2_nemnx")

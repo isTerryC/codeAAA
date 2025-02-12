@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Clash"
-run/main_scene="res://scene/text.tscn"
+run/main_scene="res://Clash/game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Terminal="*res://addons/terminal/terminal.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+G="*res://Clash/Scripts/G.gd"
 
 [dialogic]
 

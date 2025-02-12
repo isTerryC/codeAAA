@@ -1,0 +1,193 @@
+[gd_scene load_steps=19 format=3 uid="uid://cosl5pqpshv84"]
+
+[ext_resource type="Script" path="res://Clash/Scripts/UI/UIManager.gd" id="1_uvvb1"]
+[ext_resource type="PackedScene" uid="uid://cqwjunlehe1t2" path="res://Clash/Scenes/UI/ui_mail.tscn" id="2_mhl0u"]
+[ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="2_w03e6"]
+[ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="3_qua5f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4y4p"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d5jg5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4r57"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxbk"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[sub_resource type="InputEventKey" id="InputEventKey_4687j"]
+device = -1
+keycode = 65
+unicode = 65
+
+[sub_resource type="Shortcut" id="Shortcut_047an"]
+events = [SubResource("InputEventKey_4687j")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_73ej5"]
+device = -1
+keycode = 77
+unicode = 109
+
+[sub_resource type="Shortcut" id="Shortcut_bsobg"]
+events = [SubResource("InputEventKey_73ej5")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_flmsc"]
+device = -1
+keycode = 70
+unicode = 102
+
+[sub_resource type="Shortcut" id="Shortcut_5seq3"]
+events = [SubResource("InputEventKey_flmsc")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_qkbua"]
+device = -1
+keycode = 78
+unicode = 110
+
+[sub_resource type="Shortcut" id="Shortcut_xgk6o"]
+events = [SubResource("InputEventKey_qkbua")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_gds8e"]
+device = -1
+keycode = 67
+unicode = 99
+
+[sub_resource type="Shortcut" id="Shortcut_egndq"]
+events = [SubResource("InputEventKey_gds8e")]
+
+[node name="MAIN" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_uvvb1")
+mail_ui = ExtResource("2_mhl0u")
+
+[node name="BorderLine" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label_Up" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 60.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_y4y4p")
+
+[node name="Label_Middle" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 1152.0
+offset_bottom = 582.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d5jg5")
+
+[node name="Label_Down" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_m4r57")
+
+[node name="MainUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="BackGround" type="Panel" parent="MainUI"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ekxbk")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainUI"]
+layout_mode = 1
+offset_left = 288.0
+offset_top = 192.0
+offset_right = 944.0
+offset_bottom = 480.0
+theme_override_fonts/normal_font = ExtResource("3_qua5f")
+theme_override_font_sizes/normal_font_size = 21
+bbcode_enabled = true
+text = "  ,----..     ,--,                                 ,---,     
+ /   /   \\  ,--.'|                               ,--.' |     
+|   :     : |  | :                               |  |  :     
+.   |  ;. / :  : '                    .--.--.    :  :  :     
+.   ; /--`  |  ' |       ,--.--.     /  /    '   :  |  |,--. 
+;   | ;     '  | |      /       \\   |  :  /`./   |  :  '   | 
+|   : |     |  | :     .--.  .-. |  |  :  ;_     |  |   /' : 
+.   | '___  '  : |__    \\__\\/: . .   \\  \\    `.  '  :  | | | 
+'   ; : .'| |  | '.'|   ,\" .--.; |    `----.   \\ |  |  ' | : 
+'   | '/  : ;  :    ;  /  /  ,.  |   /  /`--'  / |  :  :_:,' 
+|   :    /  |  ,   /  ;  :   .'   \\ '--'.     /  |  | ,'     
+ \\   \\ .'    ---`-'   |  ,     .-./   `--'---'   `--''       
+  `---`                `--`---'                           "
+scroll_active = false
+
+[node name="MarginContainer" type="MarginContainer" parent="MainUI"]
+z_index = 100
+layout_mode = 2
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 1
+
+[node name="FunctionBar" type="HBoxContainer" parent="MainUI/MarginContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 2
+
+[node name="Button_Archive" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("2_w03e6")
+action_mode = 0
+shortcut = SubResource("Shortcut_047an")
+text = "A) 档案"
+flat = true
+
+[node name="Button_Mailbox" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("2_w03e6")
+shortcut = SubResource("Shortcut_bsobg")
+text = "M) 信箱"
+flat = true
+
+[node name="Button_Files" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("2_w03e6")
+shortcut = SubResource("Shortcut_5seq3")
+text = "F) 文件"
+flat = true
+
+[node name="Button_Network" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("2_w03e6")
+shortcut = SubResource("Shortcut_xgk6o")
+text = "N) 网络"
+flat = true
+
+[node name="Button_Command" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("2_w03e6")
+shortcut = SubResource("Shortcut_egndq")
+text = "C) 命令行
+"
+flat = true
+
+[connection signal="pressed" from="MainUI/MarginContainer/FunctionBar/Button_Mailbox" to="." method="_on_button_mailbox_pressed"]
