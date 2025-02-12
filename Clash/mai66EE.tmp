@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://cosl5pqpshv84"]
+
+[ext_resource type="FontFile" uid="uid://dvci8i7yc4ri8" path="res://fonts/0xProtoNerdFontMono-Italic.ttf" id="1_23ixr"]
+[ext_resource type="Script" path="res://Clash-main/scaneffect.gd" id="2_loms5"]
+
+[sub_resource type="Theme" id="Theme_221c3"]
+default_font = ExtResource("1_23ixr")
+default_font_size = 0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BckGround" type="ColorRect" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+offset_left = 287.0
+offset_top = 145.0
+offset_right = 899.0
+offset_bottom = 425.0
+theme = SubResource("Theme_221c3")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "  ,----..     ,--,                                 ,---,     
+ /   /   \\  ,--.'|                               ,--.' |     
+|   :     : |  | :                               |  |  :     
+.   |  ;. / :  : '                    .--.--.    :  :  :     
+.   ; /--`  |  ' |       ,--.--.     /  /    '   :  |  |,--. 
+;   | ;     '  | |      /       \\   |  :  /`./   |  :  '   | 
+|   : |     |  | :     .--.  .-. |  |  :  ;_     |  |   /' : 
+.   | '___  '  : |__    \\__\\/: . .   \\  \\    `.  '  :  | | | 
+'   ; : .'| |  | '.'|   ,\" .--.; |    `----.   \\ |  |  ' | : 
+'   | '/  : ;  :    ;  /  /  ,.  |   /  /`--'  / |  :  :_:,' 
+|   :    /  |  ,   /  ;  :   .'   \\ '--'.     /  |  | ,'     
+ \\   \\ .'    ---`-'   |  ,     .-./   `--'---'   `--''       
+  `---`                `--`---'                           "
+script = ExtResource("2_loms5")

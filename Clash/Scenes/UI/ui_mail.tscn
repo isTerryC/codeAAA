@@ -1,0 +1,123 @@
+[gd_scene load_steps=11 format=3 uid="uid://cqwjunlehe1t2"]
+
+[ext_resource type="Script" path="res://Clash/Scripts/UI/UI_Mail.gd" id="1_up1lr"]
+[ext_resource type="Theme" uid="uid://dkvdqg7gg4au1" path="res://Clash/Themes/head_text.tres" id="2_3b31y"]
+[ext_resource type="FontFile" uid="uid://cp026qhwwjx8c" path="res://Clash/fonts/0xProto/0xProtoNerdFontMono-Bold.ttf" id="3_hd0bo"]
+[ext_resource type="Theme" uid="uid://b2vr4panjjw2a" path="res://Clash/Themes/loading_content.tres" id="4_3l5rl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s34sa"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ip1qp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8dm1v"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_veogb"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[sub_resource type="InputEventKey" id="InputEventKey_u5mtu"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_k7xjj"]
+events = [SubResource("InputEventKey_u5mtu")]
+
+[node name="UI_MAIL" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_up1lr")
+
+[node name="BorderLine" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ColorRect" type="ColorRect" parent="BorderLine"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.0117647, 0.00784314, 0.00784314, 0)
+
+[node name="Label_Up" type="Label" parent="BorderLine/ColorRect"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 60.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_s34sa")
+
+[node name="Label_Middle" type="Label" parent="BorderLine/ColorRect"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 1152.0
+offset_bottom = 582.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ip1qp")
+
+[node name="Label_Down" type="Label" parent="BorderLine/ColorRect"]
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8dm1v")
+
+[node name="MailUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="BackGround" type="Panel" parent="MailUI"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_veogb")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MailUI"]
+layout_mode = 1
+offset_left = 267.0
+offset_top = 253.0
+offset_right = 910.0
+offset_bottom = 385.0
+theme = ExtResource("2_3b31y")
+theme_override_fonts/normal_font = ExtResource("3_hd0bo")
+theme_override_font_sizes/normal_font_size = 46
+bbcode_enabled = true
+text = "UI_mail界面
+under_construction..."
+
+[node name="MarginContainer" type="MarginContainer" parent="MailUI"]
+layout_mode = 2
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 6
+
+[node name="FunctionBar" type="HBoxContainer" parent="MailUI/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 2
+
+[node name="Button_Exit" type="Button" parent="MailUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("4_3l5rl")
+shortcut = SubResource("Shortcut_k7xjj")
+text = "Esc) 退出
+"
+flat = true
+
+[connection signal="pressed" from="MailUI/MarginContainer/FunctionBar/Button_Exit" to="." method="_on_button_exit_pressed"]

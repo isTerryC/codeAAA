@@ -1,0 +1,179 @@
+[gd_scene load_steps=13 format=3 uid="uid://bsmx0kijr2fyr"]
+
+[ext_resource type="Script" path="res://Clash/Scripts/Scene-0/newloading.gd" id="1_2al7k"]
+[ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="1_qyqy4"]
+[ext_resource type="Theme" uid="uid://cf8whtktkywed" path="res://Clash/Themes/normal_text.tres" id="2_nbma8"]
+[ext_resource type="Theme" uid="uid://b2vr4panjjw2a" path="res://Clash/Themes/loading_content.tres" id="3_e862s"]
+[ext_resource type="StyleBox" uid="uid://chp7cbjigmbcy" path="res://Clash/Themes/Stylebox/Progress_Bar.tres" id="4_wpg3d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n0dhm"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aaf1q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qasq1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="FontVariation" id="FontVariation_u3thr"]
+base_font = ExtResource("1_qyqy4")
+spacing_glyph = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jwf3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 6
+
+[sub_resource type="FontVariation" id="FontVariation_4c8od"]
+base_font = ExtResource("1_qyqy4")
+spacing_glyph = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_asv3e"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[node name="Newloading" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2al7k")
+
+[node name="BackGround" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n0dhm")
+metadata/_edit_group_ = true
+
+[node name="BorderLine" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label_Up" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 60.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_aaf1q")
+
+[node name="Label_Middle" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 1152.0
+offset_bottom = 582.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qasq1")
+
+[node name="Label" type="RichTextLabel" parent="BorderLine/Label_Middle"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nbma8")
+theme_override_fonts/normal_font = SubResource("FontVariation_u3thr")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]安全模式[/center]"
+
+[node name="Label_Down" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8jwf3")
+
+[node name="Clash_Title" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.25
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 253.0
+offset_top = 0.199997
+offset_right = -261.0
+offset_bottom = 1.59998
+grow_horizontal = 2
+theme = ExtResource("2_nbma8")
+theme_override_fonts/normal_font = ExtResource("1_qyqy4")
+theme_override_font_sizes/normal_font_size = 21
+bbcode_enabled = true
+text = "  ,----..     ,--,                                 ,---,     
+ /   /   \\  ,--.'|                               ,--.' |     
+|   :     : |  | :                               |  |  :     
+.   |  ;. / :  : '                    .--.--.    :  :  :     
+.   ; /--`  |  ' |       ,--.--.     /  /    '   :  |  |,--. 
+;   | ;     '  | |      /       \\   |  :  /`./   |  :  '   | 
+|   : |     |  | :     .--.  .-. |  |  :  ;_     |  |   /' : 
+.   | '___  '  : |__    \\__\\/: . .   \\  \\    `.  '  :  | | | 
+'   ; : .'| |  | '.'|   ,\" .--.; |    `----.   \\ |  |  ' | : 
+'   | '/  : ;  :    ;  /  /  ,.  |   /  /`--'  / |  :  :_:,' 
+|   :    /  |  ,   /  ;  :   .'   \\ '--'.     /  |  | ,'     
+ \\   \\ .'    ---`-'   |  ,     .-./   `--'---'   `--''       
+  `---`                `--`---'                           "
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="percentage" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1020.0
+offset_top = 595.0
+offset_right = 1101.0
+offset_bottom = 637.0
+theme = ExtResource("2_nbma8")
+theme_override_fonts/font = SubResource("FontVariation_4c8od")
+theme_override_font_sizes/font_size = 33
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 653.0
+offset_top = 598.0
+offset_right = 1005.0
+offset_bottom = 630.0
+size_flags_vertical = 1
+theme = ExtResource("2_nbma8")
+theme_override_colors/font_color = Color(0, 0, 0.552941, 1)
+theme_override_colors/font_outline_color = Color(0.0542413, 0.292073, 1, 1)
+theme_override_font_sizes/font_size = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_asv3e")
+theme_override_styles/fill = ExtResource("4_wpg3d")
+step = 5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+z_index = 100
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme = ExtResource("3_e862s")
+theme_override_constants/margin_left = 45
+metadata/_edit_lock_ = true
+
+[node name="Loading_Content" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme = ExtResource("3_e862s")
+text = "正在登入..."
+vertical_alignment = 1
+metadata/_edit_lock_ = true
