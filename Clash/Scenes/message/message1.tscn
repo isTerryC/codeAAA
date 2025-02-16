@@ -1,0 +1,158 @@
+[gd_scene load_steps=12 format=3 uid="uid://dmjmme66b8yhc"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/message1.gd" id="1_8giad"]
+[ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="1_lwwj2"]
+[ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_hyw22"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_okc8n"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78gkp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ocdjf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6cray"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5xps"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bowat"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="InputEventKey" id="InputEventKey_qkbua"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_25dsu"]
+events = [SubResource("InputEventKey_qkbua")]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8giad")
+
+[node name="BackGround" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_okc8n")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 192.0
+offset_right = 938.0
+offset_bottom = 480.0
+theme_override_fonts/normal_font = ExtResource("2_hyw22")
+theme_override_font_sizes/normal_font_size = 21
+bbcode_enabled = true
+text = "  ,----..     ,--,                                 ,---,     
+ /   /   \\  ,--.'|                               ,--.' |     
+|   :     : |  | :                               |  |  :     
+.   |  ;. / :  : '                    .--.--.    :  :  :     
+.   ; /--`  |  ' |       ,--.--.     /  /    '   :  |  |,--. 
+;   | ;     '  | |      /       \\   |  :  /`./   |  :  '   | 
+|   : |     |  | :     .--.  .-. |  |  :  ;_     |  |   /' : 
+.   | '___  '  : |__    \\__\\/: . .   \\  \\    `.  '  :  | | | 
+'   ; : .'| |  | '.'|   ,\" .--.; |    `----.   \\ |  |  ' | : 
+'   | '/  : ;  :    ;  /  /  ,.  |   /  /`--'  / |  :  :_:,' 
+|   :    /  |  ,   /  ;  :   .'   \\ '--'.     /  |  | ,'     
+ \\   \\ .'    ---`-'   |  ,     .-./   `--'---'   `--''       
+  `---`                `--`---'                           "
+scroll_active = false
+
+[node name="BorderLine" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label_Up" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 60.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_78gkp")
+
+[node name="Label_Middle" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 1152.0
+offset_bottom = 582.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ocdjf")
+
+[node name="Label_Down" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_6cray")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 580.0
+offset_right = 376.0
+offset_bottom = 620.0
+scale = Vector2(10.5725, -12.9552)
+theme_override_styles/panel = SubResource("StyleBoxFlat_b5xps")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 68.0
+offset_right = 415.0
+offset_bottom = 91.0
+text = "信箱"
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(350, 400)
+layout_mode = 0
+offset_left = 372.0
+offset_top = 120.0
+offset_right = 722.0
+offset_bottom = 520.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_bowat")
+text = "现在我将为你提供帮助.
+
+
+
+
+
+
+
+
+                                             D"
+
+[node name="Button_ESC" type="Button" parent="."]
+layout_mode = 0
+offset_left = 990.0
+offset_top = 595.0
+offset_right = 1123.0
+offset_bottom = 629.0
+theme = ExtResource("1_lwwj2")
+shortcut = SubResource("Shortcut_25dsu")
+text = "ESC)  返回"
+flat = true
+
+[connection signal="pressed" from="Button_ESC" to="." method="_on_button_esc_pressed"]

@@ -54,8 +54,7 @@ events = [SubResource("InputEventKey_flmsc")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_qkbua"]
 device = -1
-keycode = 78
-unicode = 110
+keycode = 4194305
 
 [sub_resource type="Shortcut" id="Shortcut_scl1d"]
 events = [SubResource("InputEventKey_qkbua")]
@@ -191,3 +190,5 @@ shortcut = SubResource("Shortcut_dn35b")
 text = "C) 命令行
 "
 flat = true
+
+[connection signal="pressed" from="MainUI/MarginContainer/FunctionBar/Button_Mailbox" to="." method="_on_button_mailbox_pressed"]
