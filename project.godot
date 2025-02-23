@@ -26,6 +26,11 @@ G="*res://Clash/Scripts/G.gd"
 directories/dch_directory={}
 directories/dtl_directory={}
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1200
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
