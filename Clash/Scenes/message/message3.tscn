@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://c6ltqpx83d1a5"]
 
-[ext_resource type="Script" uid="uid://co1165tqbftrv" path="res://addons/dialogic/Resources/message_3.gd" id="1_hwbwr"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/message_3.gd" id="1_hwbwr"]
 [ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="1_vfr1d"]
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_n8a1x"]
 

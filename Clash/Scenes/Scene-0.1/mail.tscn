@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://c12gmp76bipnf"]
 
-[ext_resource type="Script" uid="uid://cqgjrp5l461uc" path="res://addons/dialogic/Resources/mail.gd" id="1_eciuk"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/mail.gd" id="1_eciuk"]
 [ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="1_ysnbm"]
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_f501f"]
 
@@ -74,8 +74,7 @@ text = "  ,----..     ,--,                                 ,---,
 |   :    /  |  ,   /  ;  :   .'   \\ '--'.     /  |  | ,'     
  \\   \\ .'    ---`-'   |  ,     .-./   `--'---'   `--''       
   `---`                `--`---'                           "
-fit_content = true
-autowrap_mode = 0
+scroll_active = false
 
 [node name="BorderLine" type="Control" parent="."]
 z_index = 1
