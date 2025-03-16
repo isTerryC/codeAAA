@@ -1,6 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvfiv5uhmkqq7"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://dnhtx67s7032l" path="res://addons/dialogic/Modules/Text/character_settings/character_portrait_mood_settings.gd" id="1_5ni5u"]
+=======
+[ext_resource type="Script" uid="uid://d4nln3m0pf3d4" path="res://addons/dialogic/Modules/Text/character_settings/character_portrait_mood_settings.gd" id="1_5ni5u"]
+>>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://dpwhshre1n4t6" path="res://addons/dialogic/Editor/Events/Fields/field_options_dynamic.tscn" id="1_oggvu"]
 
 [node name="Typing Sound Mood" type="HBoxContainer"]

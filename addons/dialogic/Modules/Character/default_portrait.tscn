@@ -1,6 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://b32paf0ll6um8"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://tm4lkkh6iopq" path="res://addons/dialogic/Modules/Character/default_portrait.gd" id="1_wn77n"]
+=======
+[ext_resource type="Script" uid="uid://bsgdn3het816w" path="res://addons/dialogic/Modules/Character/default_portrait.gd" id="1_wn77n"]
+>>>>>>> Stashed changes
 
 [node name="DefaultPortrait" type="Node2D"]
 script = ExtResource("1_wn77n")

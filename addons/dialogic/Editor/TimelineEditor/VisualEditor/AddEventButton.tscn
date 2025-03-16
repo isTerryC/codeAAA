@@ -1,6 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://depcrpeh3f4rv"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://c755ui8otukox" path="res://addons/dialogic/Editor/TimelineEditor/VisualEditor/AddEventButton.gd" id="1_s43sc"]
+=======
+[ext_resource type="Script" uid="uid://dpp1i2avv1pde" path="res://addons/dialogic/Editor/TimelineEditor/VisualEditor/AddEventButton.gd" id="1_s43sc"]
+>>>>>>> Stashed changes
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qx31r"]
 content_margin_left = 4.0

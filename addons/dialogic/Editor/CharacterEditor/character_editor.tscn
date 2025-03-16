@@ -1,8 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://dlskc36c5hrwv"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://cdk5uymwaqgig" path="res://addons/dialogic/Editor/CharacterEditor/character_editor.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://dbpkta2tjsqim" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn" id="2_uhhqs"]
 [ext_resource type="Script" uid="uid://c32sc6k5tmya6" path="res://addons/dialogic/Editor/CharacterEditor/character_editor_portrait_tree.gd" id="2_vad0i"]
+=======
+[ext_resource type="Script" uid="uid://xamtt1um7a5f" path="res://addons/dialogic/Editor/CharacterEditor/character_editor.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbpkta2tjsqim" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn" id="2_uhhqs"]
+[ext_resource type="Script" uid="uid://ujqquhki7lks" path="res://addons/dialogic/Editor/CharacterEditor/character_editor_portrait_tree.gd" id="2_vad0i"]
+>>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://babwe22dqjta" path="res://addons/dialogic/Editor/Images/Pieces/add-folder.svg" id="3_v1qnr"]
 
 [sub_resource type="Image" id="Image_r5ayh"]

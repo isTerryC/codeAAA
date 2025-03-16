@@ -1,6 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://bnkck3hocbkk5"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://epq3tyn6ww5h" path="res://addons/dialogic/Editor/CharacterEditor/char_edit_section_general.gd" id="1_3e1i1"]
+=======
+[ext_resource type="Script" uid="uid://d077jqd5fk4bx" path="res://addons/dialogic/Editor/CharacterEditor/char_edit_section_general.gd" id="1_3e1i1"]
+>>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://dbpkta2tjsqim" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn" id="2_cxfqm"]
 
 [sub_resource type="Image" id="Image_ywoka"]

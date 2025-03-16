@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=2 format=3 uid="uid://spobqebc73vx"]
 
 [ext_resource type="Script" uid="uid://qok2mhto5pc6" path="res://addons/dialogic/Modules/Condition/ui_condition_end.gd" id="1_sh52m"]
+=======
+[gd_scene load_steps=2 format=3 uid="uid://cbwvtjms5t4q5"]
+
+[ext_resource type="Script" uid="uid://bhdmfgigs740o" path="res://addons/dialogic/Modules/Condition/ui_condition_end.gd" id="1_sh52m"]
+>>>>>>> Stashed changes
 
 [node name="Condition_End" type="HBoxContainer"]
 offset_right = 90.0

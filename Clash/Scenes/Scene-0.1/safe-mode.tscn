@@ -1,6 +1,10 @@
 [gd_scene load_steps=18 format=3 uid="uid://c5ryxb8mik4yy"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://cqqq8mih5jeum" path="res://Clash/Scripts/Scene-0.1/safe_mode.gd" id="1_vvrkd"]
+=======
+[ext_resource type="Script" uid="uid://dw4avppwnbtp" path="res://Clash/Scripts/Scene-0.1/safe_mode.gd" id="1_vvrkd"]
+>>>>>>> Stashed changes
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_wsk74"]
 [ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="3_qe1jo"]
 
@@ -117,10 +121,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_vkcv5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainUI"]
 layout_mode = 1
-offset_left = 288.0
-offset_top = 192.0
-offset_right = 944.0
-offset_bottom = 480.0
+offset_left = 275.0
+offset_top = 165.0
+offset_right = 938.0
+offset_bottom = 453.0
 theme_override_fonts/normal_font = ExtResource("2_wsk74")
 theme_override_font_sizes/normal_font_size = 21
 bbcode_enabled = true

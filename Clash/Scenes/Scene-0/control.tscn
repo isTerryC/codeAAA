@@ -1,6 +1,10 @@
 [gd_scene load_steps=19 format=3 uid="uid://d23og7kw5eme6"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://bl57k8rl8alth" path="res://Clash/Scripts/Scene-0/control.gd" id="1_yx0jc"]
+=======
+[ext_resource type="Script" uid="uid://cmriwx5j6w78w" path="res://Clash/Scripts/Scene-0/control.gd" id="1_yx0jc"]
+>>>>>>> Stashed changes
 [ext_resource type="Theme" uid="uid://dkvdqg7gg4au1" path="res://Clash/Themes/head_text.tres" id="2_1anb3"]
 [ext_resource type="Theme" uid="uid://cf8whtktkywed" path="res://Clash/Themes/normal_text.tres" id="2_itjvq"]
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="3_28k14"]

@@ -1,6 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cuoywrmvda1yg"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://dq6uirnpjbl3n" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/example_history_item.gd" id="1_dgoja"]
+=======
+[ext_resource type="Script" uid="uid://cr0yv18v6pm40" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/example_history_item.gd" id="1_dgoja"]
+>>>>>>> Stashed changes
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upgjp"]
 content_margin_left = 5.0

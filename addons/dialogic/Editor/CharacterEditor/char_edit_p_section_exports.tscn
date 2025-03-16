@@ -1,6 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://cfcs7lb6gqnmd"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://qix10xljmaj4" path="res://addons/dialogic/Editor/CharacterEditor/char_edit_p_section_exports.gd" id="1_isys8"]
+=======
+[ext_resource type="Script" uid="uid://de7cu2tmtao6j" path="res://addons/dialogic/Editor/CharacterEditor/char_edit_p_section_exports.gd" id="1_isys8"]
+>>>>>>> Stashed changes
 
 [node name="Settings" type="VBoxContainer"]
 custom_minimum_size = Vector2(0, 35)

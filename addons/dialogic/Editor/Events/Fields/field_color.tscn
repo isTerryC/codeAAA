@@ -1,6 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://4e0kjekan5e7"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://1y051rxs7nqh" path="res://addons/dialogic/Editor/Events/Fields/field_color.gd" id="1_l666a"]
+=======
+[ext_resource type="Script" uid="uid://dhrxpwen6bt0v" path="res://addons/dialogic/Editor/Events/Fields/field_color.gd" id="1_l666a"]
+>>>>>>> Stashed changes
 
 [node name="Field_Color" type="ColorPickerButton"]
 custom_minimum_size = Vector2(48, 0)

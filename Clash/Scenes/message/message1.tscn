@@ -1,6 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://dmjmme66b8yhc"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://d0gomydrt2uk2" path="res://addons/dialogic/Resources/message1.gd" id="1_8giad"]
+=======
+[ext_resource type="Script" uid="uid://bhhbmkdetpk7t" path="res://addons/dialogic/Resources/message1.gd" id="1_8giad"]
+>>>>>>> Stashed changes
 [ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="1_lwwj2"]
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_hyw22"]
 

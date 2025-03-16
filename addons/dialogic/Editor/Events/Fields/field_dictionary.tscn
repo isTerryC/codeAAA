@@ -1,6 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://c74bnmhefu72w"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://b5rsrtin463xo" path="res://addons/dialogic/Editor/Events/Fields/field_dictionary.gd" id="1_p4kmu"]
+=======
+[ext_resource type="Script" uid="uid://7hm2ex4twowe" path="res://addons/dialogic/Editor/Events/Fields/field_dictionary.gd" id="1_p4kmu"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Image" id="Image_mpo34"]
 data = {

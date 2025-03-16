@@ -1,11 +1,20 @@
 [gd_scene load_steps=14 format=3 uid="uid://c7lmt5cp7bxcm"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://6vwdq4366d57" path="res://addons/dialogic/Editor/Common/reference_manager.gd" id="1_3t531"]
 [ext_resource type="Script" uid="uid://cspnwmf1psu3x" path="res://addons/dialogic/Editor/Common/broken_reference_manager.gd" id="1_agmg4"]
 [ext_resource type="Script" uid="uid://cx3w1k6c4lxk4" path="res://addons/dialogic/Editor/Common/ReferenceManager_AddReplacementPanel.gd" id="2_tt4jd"]
 [ext_resource type="PackedScene" uid="uid://dpwhshre1n4t6" path="res://addons/dialogic/Editor/Events/Fields/field_options_dynamic.tscn" id="3_yomsc"]
 [ext_resource type="PackedScene" uid="uid://dbpkta2tjsqim" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn" id="5_sdymt"]
 [ext_resource type="Script" uid="uid://bogfhbp26r8ao" path="res://addons/dialogic/Editor/Common/unique_identifiers_manager.gd" id="5_wnvbq"]
+=======
+[ext_resource type="Script" uid="uid://dp5dmdx25pn1q" path="res://addons/dialogic/Editor/Common/reference_manager.gd" id="1_3t531"]
+[ext_resource type="Script" uid="uid://b0dyyf38uctpk" path="res://addons/dialogic/Editor/Common/broken_reference_manager.gd" id="1_agmg4"]
+[ext_resource type="Script" uid="uid://b1wefagmpfhts" path="res://addons/dialogic/Editor/Common/ReferenceManager_AddReplacementPanel.gd" id="2_tt4jd"]
+[ext_resource type="PackedScene" uid="uid://dpwhshre1n4t6" path="res://addons/dialogic/Editor/Events/Fields/field_options_dynamic.tscn" id="3_yomsc"]
+[ext_resource type="PackedScene" uid="uid://dbpkta2tjsqim" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn" id="5_sdymt"]
+[ext_resource type="Script" uid="uid://iklvyrsd16wg" path="res://addons/dialogic/Editor/Common/unique_identifiers_manager.gd" id="5_wnvbq"]
+>>>>>>> Stashed changes
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_l6uiy"]
 

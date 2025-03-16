@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bivw10naki0v6"]
 
-[ext_resource type="Script" uid="uid://crkdrh04yciym" path="res://addons/dialogic/Resources/digital_matrix.gd" id="2_d83d2"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/digital_matrix.gd" id="2_d83d2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d83d2"]
 bg_color = Color(0.156863, 0.172549, 0.203922, 1)

@@ -1,7 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://c1k5m0w3r40xf"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://dqamkruq2qx8s" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.gd" id="1_tu40u"]
 [ext_resource type="Script" uid="uid://0ukqrybvyc6o" path="res://addons/dialogic/Modules/Background/node_background_holder.gd" id="2_ghan2"]
+=======
+[ext_resource type="Script" uid="uid://wulgsqymnfnu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.gd" id="1_tu40u"]
+[ext_resource type="Script" uid="uid://dskm4pp18lmfe" path="res://addons/dialogic/Modules/Background/node_background_holder.gd" id="2_ghan2"]
+>>>>>>> Stashed changes
 
 [node name="BackgroundLayer" type="Control"]
 layout_direction = 2

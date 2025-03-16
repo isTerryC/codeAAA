@@ -1,6 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://de13fdeebrkcb"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://06k7yryuv3dr" path="res://addons/dialogic/Editor/Events/BranchEnd.gd" id="1"]
+=======
+[ext_resource type="Script" uid="uid://d33q8pqgbb2ol" path="res://addons/dialogic/Editor/Events/BranchEnd.gd" id="1"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Image" id="Image_6aqdp"]
 data = {

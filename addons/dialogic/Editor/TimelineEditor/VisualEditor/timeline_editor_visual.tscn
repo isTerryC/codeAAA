@@ -1,9 +1,16 @@
 [gd_scene load_steps=10 format=3 uid="uid://ysqbusmy0qma"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://e86vq46orcll" path="res://addons/dialogic/Editor/TimelineEditor/VisualEditor/timeline_editor_visual.gd" id="1_8smxc"]
 [ext_resource type="Theme" uid="uid://cqst728xxipcw" path="res://addons/dialogic/Editor/Theme/MainTheme.tres" id="2_x0fhp"]
 [ext_resource type="Script" uid="uid://d0bdisnkfeyjq" path="res://addons/dialogic/Editor/TimelineEditor/VisualEditor/TimelineArea.gd" id="3_sap1x"]
 [ext_resource type="Script" uid="uid://baphkyut1gvcl" path="res://addons/dialogic/Editor/Events/EventBlock/event_right_click_menu.gd" id="4_ugiq6"]
+=======
+[ext_resource type="Script" uid="uid://dqjyjwmav5cms" path="res://addons/dialogic/Editor/TimelineEditor/VisualEditor/timeline_editor_visual.gd" id="1_8smxc"]
+[ext_resource type="Theme" uid="uid://cqst728xxipcw" path="res://addons/dialogic/Editor/Theme/MainTheme.tres" id="2_x0fhp"]
+[ext_resource type="Script" uid="uid://c5ewd4nnkxu6s" path="res://addons/dialogic/Editor/TimelineEditor/VisualEditor/TimelineArea.gd" id="3_sap1x"]
+[ext_resource type="Script" uid="uid://bv8oljopvg24s" path="res://addons/dialogic/Editor/Events/EventBlock/event_right_click_menu.gd" id="4_ugiq6"]
+>>>>>>> Stashed changes
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_phyjj"]
 content_margin_top = 10.0
