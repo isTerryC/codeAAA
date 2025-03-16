@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cqwjunlehe1t2"]
 
-[ext_resource type="Script" path="res://Clash/Scripts/UI/UI_Mail.gd" id="1_up1lr"]
+[ext_resource type="Script" uid="uid://cyseu1kjtxavw" path="res://Clash/Scripts/UI/UI_Mail.gd" id="1_up1lr"]
 [ext_resource type="Theme" uid="uid://dkvdqg7gg4au1" path="res://Clash/Themes/head_text.tres" id="2_3b31y"]
 [ext_resource type="FontFile" uid="uid://cp026qhwwjx8c" path="res://Clash/fonts/0xProto/0xProtoNerdFontMono-Bold.ttf" id="3_hd0bo"]
 [ext_resource type="Theme" uid="uid://b2vr4panjjw2a" path="res://Clash/Themes/loading_content.tres" id="4_3l5rl"]

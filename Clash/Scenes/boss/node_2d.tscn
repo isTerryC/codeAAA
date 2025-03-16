@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dkgjboxne23c3"]
 
-[ext_resource type="Script" path="res://Clash/Scripts/mix/control.gd" id="2_1wtrq"]
+[ext_resource type="Script" uid="uid://cdevcs3ut15sj" path="res://Clash/Scripts/mix/control.gd" id="2_1wtrq"]
 
 [node name="Node2D" type="Node2D"]
 

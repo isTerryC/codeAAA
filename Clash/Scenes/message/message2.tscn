@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dg4tcsfqto3kr"]
 
 [ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="1_l6alc"]
-[ext_resource type="Script" path="res://addons/dialogic/Resources/message_2.gd" id="1_v7wfv"]
+[ext_resource type="Script" uid="uid://cvofvchbhdvup" path="res://addons/dialogic/Resources/message_2.gd" id="1_v7wfv"]
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_q81os"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_er811"]
