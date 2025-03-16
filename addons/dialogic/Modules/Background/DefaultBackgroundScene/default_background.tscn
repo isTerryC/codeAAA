@@ -1,10 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cl6g6ymkhjven"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://dpoimm5mldurm" path="res://addons/dialogic/Modules/Background/DefaultBackgroundScene/default_background.gd" id="1_nkdrp"]
-=======
-[ext_resource type="Script" uid="uid://bxiect1ib55jx" path="res://addons/dialogic/Modules/Background/DefaultBackgroundScene/default_background.gd" id="1_nkdrp"]
->>>>>>> Stashed changes
 
 [node name="DefaultBackground" type="Control"]
 layout_mode = 3

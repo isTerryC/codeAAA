@@ -1,10 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ckc1sg17rg3xr"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://b15o20jlynaot" path="res://addons/terminal/terminal_menu.gd" id="1_x7sc3"]
-=======
-[ext_resource type="Script" uid="uid://j5div6dlaenr" path="res://addons/terminal/terminal_menu.gd" id="1_x7sc3"]
->>>>>>> Stashed changes
 
 [sub_resource type="GDScript" id="GDScript_6h83f"]
 script/source = "extends TextEdit

@@ -1,10 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dkgjboxne23c3"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://cdevcs3ut15sj" path="res://Clash/Scripts/mix/control.gd" id="2_1wtrq"]
-=======
-[ext_resource type="Script" uid="uid://cuiivfdmdli7l" path="res://Clash/Scripts/mix/control.gd" id="2_1wtrq"]
->>>>>>> Stashed changes
 
 [node name="Node2D" type="Node2D"]
 

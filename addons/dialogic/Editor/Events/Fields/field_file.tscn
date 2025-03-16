@@ -1,10 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://7mvxuaulctcq"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://2adddk1787at" path="res://addons/dialogic/Editor/Events/Fields/field_file.gd" id="1_0grcf"]
-=======
-[ext_resource type="Script" uid="uid://o7xoqn0li7e1" path="res://addons/dialogic/Editor/Events/Fields/field_file.gd" id="1_0grcf"]
->>>>>>> Stashed changes
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tr837"]
 

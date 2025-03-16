@@ -1,10 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://cosl5pqpshv84"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://ct61vcgeh7cto" path="res://Clash/Scripts/UI/UIManager.gd" id="1_uvvb1"]
-=======
-[ext_resource type="Script" uid="uid://dyw7bkd7ndld3" path="res://Clash/Scripts/UI/UIManager.gd" id="1_uvvb1"]
->>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://cqwjunlehe1t2" path="res://Clash/Scenes/UI/ui_mail.tscn" id="2_mhl0u"]
 [ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="2_w03e6"]
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="3_qua5f"]

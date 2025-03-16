@@ -1,10 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d3bhehatwoio"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://dabeqp1mlkr5f" path="res://addons/dialogic/Editor/Events/Fields/field_options_fixed.gd" id="1"]
-=======
-[ext_resource type="Script" uid="uid://5gl7lsn3bo2k" path="res://addons/dialogic/Editor/Events/Fields/field_options_fixed.gd" id="1"]
->>>>>>> Stashed changes
 
 [node name="Field_FixedOptions" type="MenuButton"]
 offset_right = 137.0

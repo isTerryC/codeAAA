@@ -1,12 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cn674foxwedqu"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://dibtqmytyigj" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.gd" id="1_3cmha"]
 [ext_resource type="Script" uid="uid://b0x18nou2tdgk" path="res://addons/dialogic/Modules/Text/node_input.gd" id="2_dxpjw"]
-=======
-[ext_resource type="Script" uid="uid://4ydn7g6sy6b6" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.gd" id="1_3cmha"]
-[ext_resource type="Script" uid="uid://yrmilxvptjn4" path="res://addons/dialogic/Modules/Text/node_input.gd" id="2_dxpjw"]
->>>>>>> Stashed changes
 
 [node name="FullAdvanceInputLayer" type="Control"]
 layout_mode = 3

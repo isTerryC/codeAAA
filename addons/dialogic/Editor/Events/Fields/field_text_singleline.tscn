@@ -1,10 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c0vkcehgjsjy"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://3wltryu0kvwb" path="res://addons/dialogic/Editor/Events/Fields/field_text_singleline.gd" id="1_4vnxv"]
-=======
-[ext_resource type="Script" uid="uid://h4lpfli7vr6a" path="res://addons/dialogic/Editor/Events/Fields/field_text_singleline.gd" id="1_4vnxv"]
->>>>>>> Stashed changes
 
 [node name="Field_Text_Singleline" type="LineEdit"]
 offset_right = 1152.0

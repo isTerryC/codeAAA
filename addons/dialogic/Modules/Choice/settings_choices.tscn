@@ -1,10 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://uarvgnbrcltm"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://dpn40xto6qhv6" path="res://addons/dialogic/Modules/Choice/settings_choices.gd" id="2"]
-=======
-[ext_resource type="Script" uid="uid://c4cmvxgytn2d" path="res://addons/dialogic/Modules/Choice/settings_choices.gd" id="2"]
->>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://dbpkta2tjsqim" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn" id="2_nxutt"]
 
 [sub_resource type="Image" id="Image_xvnnc"]

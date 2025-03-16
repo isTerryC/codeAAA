@@ -1,10 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://o7ljiritpgap"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://casac1dwb8vq6" path="res://addons/dialogic/Editor/Settings/CoreSettingsPages/settings_modules.gd" id="1_l2hk0"]
-=======
-[ext_resource type="Script" uid="uid://cuwhu4bqq3ua5" path="res://addons/dialogic/Editor/Settings/CoreSettingsPages/settings_modules.gd" id="1_l2hk0"]
->>>>>>> Stashed changes
 
 [sub_resource type="Image" id="Image_1yyxk"]
 data = {

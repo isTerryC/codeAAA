@@ -1,10 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ba5w02lm3ewkj"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://b0vefjskjje87" path="res://addons/dialogic/Editor/CharacterEditor/char_edit_p_section_main_exports.gd" id="1_mttrr"]
-=======
-[ext_resource type="Script" uid="uid://cdhy4bq3sp6d0" path="res://addons/dialogic/Editor/CharacterEditor/char_edit_p_section_main_exports.gd" id="1_mttrr"]
->>>>>>> Stashed changes
 
 [node name="MainExports" type="VBoxContainer"]
 offset_right = 374.0

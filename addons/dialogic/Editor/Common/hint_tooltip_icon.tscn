@@ -1,10 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbpkta2tjsqim"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://cqaon0u1blmhv" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.gd" id="1_x8t45"]
-=======
-[ext_resource type="Script" uid="uid://dr3y5b0cw6lpo" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.gd" id="1_x8t45"]
->>>>>>> Stashed changes
 
 [sub_resource type="Image" id="Image_c5s34"]
 data = {

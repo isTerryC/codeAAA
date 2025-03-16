@@ -1,10 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b27yweami3mxi"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://w4f5sc0iqw4q" path="res://addons/dialogic/Editor/Events/Fields/dictionary_part.gd" id="2_q88pg"]
-=======
-[ext_resource type="Script" uid="uid://r7spdr8nnplr" path="res://addons/dialogic/Editor/Events/Fields/dictionary_part.gd" id="2_q88pg"]
->>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://dl08ubinx6ugu" path="res://addons/dialogic/Editor/Events/Fields/field_flex_value.tscn" id="3_p082d"]
 
 [sub_resource type="Image" id="Image_teqf1"]

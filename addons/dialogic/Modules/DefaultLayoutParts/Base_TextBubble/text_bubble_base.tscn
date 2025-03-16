@@ -1,10 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://syki6k0e6aac"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://buyxdifp6cdao" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_TextBubble/text_bubble_base.gd" id="1_urqwc"]
-=======
-[ext_resource type="Script" uid="uid://btuqck40hwvrm" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_TextBubble/text_bubble_base.gd" id="1_urqwc"]
->>>>>>> Stashed changes
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70ljh"]
 content_margin_left = 5.0
