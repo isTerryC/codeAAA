@@ -1,0 +1,128 @@
+[gd_scene load_steps=10 format=3 uid="uid://dtkreph56ie1w"]
+
+[ext_resource type="Script" uid="uid://1i03vogi47k3" path="res://Clash/Scripts/cmd/cmd.gd" id="1_l6sdw"]
+[ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="5_snch7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgny2"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sod2x"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrm1q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2b3f"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 6
+
+[sub_resource type="InputEventKey" id="InputEventKey_flmsc"]
+device = -1
+keycode = 51
+unicode = 51
+
+[sub_resource type="InputEventKey" id="InputEventKey_thxl2"]
+device = -1
+keycode = 4194441
+unicode = 51
+
+[sub_resource type="Shortcut" id="Shortcut_t1s3o"]
+events = [SubResource("InputEventKey_flmsc"), SubResource("InputEventKey_thxl2")]
+
+[node name="TerminalUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_l6sdw")
+
+[node name="BackGround" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pgny2")
+
+[node name="BorderLine" type="Control" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label_Up" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 60.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_sod2x")
+
+[node name="Label_Middle" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 1152.0
+offset_bottom = 582.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wrm1q")
+
+[node name="Label_Down" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_t2b3f")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+z_index = 100
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 1
+
+[node name="FunctionBar" type="HBoxContainer" parent="MarginContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 2
+
+[node name="Button_Exit" type="Button" parent="MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("5_snch7")
+shortcut = SubResource("Shortcut_t1s3o")
+shortcut_in_tooltip = false
+text = "退出"
+flat = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 78.0
+offset_right = 1142.0
+offset_bottom = 582.0
+
+[node name="PathLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="OutputLabel" type="Label" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="CommandInput" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/FunctionBar/Button_Exit" to="." method="_on_button_exit_pressed"]
+[connection signal="text_submitted" from="VBoxContainer/CommandInput" to="." method="_on_command_input_text_submitted"]
