@@ -1,8 +1,12 @@
-extends BaseGUIView
+extends Control
 
 func _ready() -> void: #运行前
 	#开始检测按钮状态
 	set_process_input(true)
+	
+
+func _process(delta): #运行时
+	pass
 
 #处理选择
 #按下 1 按钮
@@ -19,4 +23,5 @@ func _on_button_exit_pressed() -> void:
 
 
 func start_game():
+	
 	get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0/loading.tscn")  # 切换到游戏场景

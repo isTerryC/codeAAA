@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://btk3eud30kbxo"
-path="res://.godot/imported/Roboto_SemiCondensed-ExtraBoldItalic.ttf-87e6d8e9ddb28ba4e73de91b15fda797.fontdata"
+path="res://.godot/imported/Roboto_SemiCondensed-ExtraBoldItalic.ttf-03fb5a538d00315bc2cc9377de0b540a.fontdata"
 
 [deps]
 
-source_file="res://fonts/Roboto_SemiCondensed-ExtraBoldItalic.ttf"
-dest_files=["res://.godot/imported/Roboto_SemiCondensed-ExtraBoldItalic.ttf-87e6d8e9ddb28ba4e73de91b15fda797.fontdata"]
+source_file="res://Clash/fonts/Roboto_SemiCondensed-ExtraBoldItalic.ttf"
+dest_files=["res://.godot/imported/Roboto_SemiCondensed-ExtraBoldItalic.ttf-03fb5a538d00315bc2cc9377de0b540a.fontdata"]
 
 [params]
 

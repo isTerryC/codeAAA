@@ -5,9 +5,9 @@ const ROWS = 10
 const COLS = 10
 const RANDOM_STR_LENGTH = 8
 const MAX_ERRORS = 3  # 最大错误次数
-const BUTTON_SIZE = 40  # 调整按钮大小为 50，按钮更小一点
+const BUTTON_SIZE = 50  # 调整按钮大小为 50，按钮更小一点
 const FONT_SIZE = 30  # 设置数字字体大小
-const RANDOM_STR_FONT_SIZE = 20  # 设置随机数串的字体大小
+const RANDOM_STR_FONT_SIZE = 30  # 设置随机数串的字体大小
 const GAME_TIP_FONT_SIZE = 20  # 设置游戏提示的字体大小
 
 # 存储数字矩阵的二维数组
@@ -40,7 +40,7 @@ var custom_font : Font = null
 # 游戏初始化
 func _ready():
 	# 加载自定义字体文件，确保路径正确
-	custom_font = load("res://Roboto_SemiCondensed-ExtraBoldItalic.ttf")  # 使用 FontFile 类型来加载字体
+	custom_font = load("res://Clash/fonts/Roboto_SemiCondensed-ExtraBoldItalic.ttf")  # 使用 FontFile 类型来加载字体
 	if custom_font:
 		print("字体加载成功！")
 	else:
@@ -77,7 +77,7 @@ func _ready():
 	# 创建一个 Label 显示矩阵
 	var random_str_label = Label.new()
 	random_str_label.text = "随机数串: " + str(random_string)
-	random_str_label.position = Vector2(0, ROWS * BUTTON_SIZE + 80)  # 将其放在矩阵下方，向下移动50单位
+	random_str_label.position = Vector2(0, ROWS * BUTTON_SIZE + 50)  # 将其放在矩阵下方，向下移动50单位
 	random_str_label.custom_minimum_size = Vector2(600, 40)  # 使用 custom_minimum_size 设置最小尺寸
 	random_str_label.add_theme_font_override("font", custom_font)  # 使用自定义字体
 	random_str_label.add_theme_font_size_override("font_size", RANDOM_STR_FONT_SIZE)  # 设置随机数串的字体大小
@@ -165,7 +165,11 @@ func _on_button_pressed(row, col):
 	
 	print("你点击了位置 (" + str(row) + ", " + str(col) + "), 当前值: " + str(clicked_value) + ", 目标值: " + str(target_value))
 
+	# 恢复之前标记的行列颜色
+	reset_marked_row_and_col()
 
+	# 标记点击的行列，变色
+	mark_row_and_col(row, col)
 
 	# 判断玩家是否点击了正确的数字
 	if clicked_value == target_value:
@@ -173,11 +177,7 @@ func _on_button_pressed(row, col):
 		# 提示玩家当前目标正确
 		update_game_tip("点击正确！你已点击第 " + str(current_index + 1) + " 个数字，目标是 " + str(target_value))
 		current_index += 1  # 增加索引，指向下一个目标数字
-		# 恢复之前标记的行列颜色
-		reset_marked_row_and_col()
 
-		# 标记点击的行列，变色
-		mark_row_and_col(row, col)
 		# 如果玩家已经点击完所有的数字
 		if current_index == RANDOM_STR_LENGTH:
 			print("游戏完成！")
@@ -224,8 +224,8 @@ func show_game_over(message: String):
 	# 显示游戏结束消息
 	var game_over_label = Label.new()
 	game_over_label.text = message
-	game_over_label.position = Vector2(600,380)
+	game_over_label.position = Vector2(100, ROWS * BUTTON_SIZE + 90)
 	game_over_label.custom_minimum_size = Vector2(300, 40)
 	game_over_label.add_theme_font_override("font", custom_font)  # 使用自定义字体
-	game_over_label.add_theme_font_size_override("font_size", 30)  # 设置结束提示字体大小
+	game_over_label.add_theme_font_size_override("font_size", GAME_TIP_FONT_SIZE)  # 设置结束提示字体大小
 	add_child(game_over_label)

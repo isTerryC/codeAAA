@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://cosl5pqpshv84"]
 
-[ext_resource type="Script" uid="uid://ct61vcgeh7cto" path="res://Clash/Scripts/UI/UIManager.gd" id="1_uvvb1"]
+[ext_resource type="Script" uid="uid://d8wjgd0v0022" path="res://Clash/Scripts/UI/UIManager.gd" id="1_uvvb1"]
 [ext_resource type="PackedScene" uid="uid://cqwjunlehe1t2" path="res://Clash/Scenes/UI/ui_mail.tscn" id="2_mhl0u"]
 [ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="2_w03e6"]
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="3_qua5f"]
@@ -116,10 +116,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ekxbk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainUI"]
 layout_mode = 1
-offset_left = 272.0
-offset_top = 188.0
-offset_right = 935.0
-offset_bottom = 562.0
+offset_left = 288.0
+offset_top = 192.0
+offset_right = 944.0
+offset_bottom = 480.0
 theme_override_fonts/normal_font = ExtResource("3_qua5f")
 theme_override_font_sizes/normal_font_size = 21
 bbcode_enabled = true
