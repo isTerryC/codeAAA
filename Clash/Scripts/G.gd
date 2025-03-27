@@ -5,3 +5,36 @@ func get_game_root() -> Node:
 
 func get_gui_view_manager() -> GUIViewManager:
 	return get_game_root().get_node("%GUIViewManager")
+
+
+# 在全局工具脚本中（如 G.gd）
+func load_hack_scene(port: int) -> void:
+	var scene_path = ""
+	
+	# 映射端口到场景
+	match port:
+		143:
+			scene_path = "res://Clash/Scenes/boss/SQL.tscn"
+		_:
+			push_error("未知端口：%d" % port)
+			return
+	
+	# 异步加载场景
+	var loader = ResourceLoader.load_threaded_request(scene_path)
+	if loader != OK:
+		push_error("场景加载失败：%s" % scene_path)
+		return
+	
+	# 等待加载完成
+	while ResourceLoader.load_threaded_get_status(scene_path) == ResourceLoader.THREAD_LOAD_IN_PROGRESS:
+		await get_tree().process_frame
+	
+	# 实例化并添加场景
+	var scene = ResourceLoader.load_threaded_get(scene_path)
+	if scene:
+		var instance = scene.instantiate()
+		get_tree().root.add_child(instance)
+		# 延迟初始化
+		instance.call_deferred("initialize")
+	else:
+		push_error("场景实例化失败：%s" % scene_path)

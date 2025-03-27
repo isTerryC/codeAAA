@@ -83,6 +83,8 @@ func get_current_dir() -> FileSystemNode:
 	print("✔️ Final directory: ", node.name)
 	return node
 
+signal clear_requested
+
 # 处理输入命令
 func execute_command(cmd: String) -> String:
 	var args = cmd.split(" ", false)
@@ -96,7 +98,12 @@ func execute_command(cmd: String) -> String:
 		"cat":
 			return handle_cat(args)
 		"man":
-			return "Available commands: ls, cd, cat, man"
+			return "Available commands: ls, cd, cat, man, clear, hack"
+		"clear":
+			emit_signal("clear_requested")  # 触发清除信号
+			return ""  # 返回空字符串，不在终端显示内容
+		"hack":
+			return handle_hack(args)
 		_:
 			return "Command not found: %s" % args[0]
 
@@ -149,6 +156,28 @@ func handle_cat(args: Array) -> String:
 	if not file_node or file_node.type != "file":
 		return "Error: File not found"
 	return file_node.content
+
+enum PORTS {
+	SQL = 143
+}
+
+# TerminalSystem.gd 中的 handle_hack 函数
+func handle_hack(args: Array) -> String:
+	if args.size() < 2:
+		return "Usage: hack <port>"
+	
+	var port = args[1].to_int()
+	G.load_hack_scene(port)
+	return "Initializing port %d breach..." % port
+
+func _deferred_scene_change(port: String) -> void:
+	match port:
+		"143":
+			get_tree().change_scene_to_file("res://Clash/Scenes/boss/SQL.tscn")
+		"80":
+			get_tree().change_scene_to_file("res://Clash/Scenes/web/AdminPanel.tscn")
+		"443":
+			get_tree().change_scene_to_file("res://Clash/Scenes/secure/SSH.tscn")
 
 # --- 辅助函数 ---
 # 解析路径（支持相对路径和绝对路径）
