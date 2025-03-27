@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=3 uid="uid://h8x2safjk68x"]
+
+[ext_resource type="Script" path="res://Clash/Scripts/Scene-0/initialize.gd" id="1_hpmq2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hast5"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tu00"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6hm1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ry2b5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 6
+
+[node name="initialize" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_hpmq2")
+
+[node name="BackGround" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hast5")
+metadata/_edit_group_ = true
+
+[node name="BorderLine" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label_Up" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 60.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_2tu00")
+
+[node name="Label_Middle" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 1152.0
+offset_bottom = 582.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_k6hm1")
+
+[node name="Label_Down" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ry2b5")
+
+[node name="Loading_Content" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 592.0
+offset_right = 238.0
+offset_bottom = 631.0
+theme_override_font_sizes/font_size = 28
+text = "正 在 初 始 化 . . ."
+
+[node name="Label_Warning" type="Label" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 88.0
+offset_right = 328.0
+offset_bottom = 127.0
+theme_override_font_sizes/font_size = 28
+text = "请您不要关闭您的终端"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

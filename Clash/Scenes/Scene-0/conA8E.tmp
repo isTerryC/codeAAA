@@ -1,0 +1,180 @@
+[gd_scene load_steps=15 format=3 uid="uid://d23og7kw5eme6"]
+
+[ext_resource type="Script" path="res://Clash/Scripts/Scene-0/control.gd" id="1_yx0jc"]
+[ext_resource type="Theme" uid="uid://dkvdqg7gg4au1" path="res://Clash/Themes/head_text.tres" id="2_1anb3"]
+[ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="3_28k14"]
+[ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="4_yvwqi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgny2"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sod2x"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrm1q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2b3f"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 6
+
+[sub_resource type="InputEventKey" id="InputEventKey_4687j"]
+device = -1
+keycode = 65
+unicode = 65
+
+[sub_resource type="Shortcut" id="Shortcut_ijd5d"]
+events = [SubResource("InputEventKey_4687j")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_73ej5"]
+device = -1
+keycode = 77
+unicode = 109
+
+[sub_resource type="Shortcut" id="Shortcut_51m77"]
+events = [SubResource("InputEventKey_73ej5")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_flmsc"]
+device = -1
+keycode = 70
+unicode = 102
+
+[sub_resource type="Shortcut" id="Shortcut_t1s3o"]
+events = [SubResource("InputEventKey_flmsc")]
+
+[node name="Start_Menu" type="Control"]
+layout_mode = 3
+anchor_top = -0.012
+anchor_bottom = -0.012
+offset_top = 7.776
+offset_right = 1152.0
+offset_bottom = 655.776
+script = ExtResource("1_yx0jc")
+
+[node name="BackGround" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pgny2")
+metadata/_edit_group_ = true
+
+[node name="BorderLine" type="Control" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label_Up" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 60.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_sod2x")
+
+[node name="Label_Middle" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 1152.0
+offset_bottom = 582.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wrm1q")
+
+[node name="Label_Down" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_t2b3f")
+
+[node name="choose" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 456.0
+offset_right = 768.0
+offset_bottom = 552.0
+theme = ExtResource("2_1anb3")
+theme_override_font_sizes/normal_font_size = 37
+bbcode_enabled = true
+text = "[center]输入数字[/center]
+[center]决定你要做什么[/center]"
+fit_content = true
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 448.0
+offset_right = 864.0
+offset_bottom = 492.0
+theme_override_font_sizes/font_size = 26
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 256.0
+offset_top = 104.0
+offset_right = 922.0
+offset_bottom = 392.0
+theme_override_fonts/normal_font = ExtResource("3_28k14")
+theme_override_font_sizes/normal_font_size = 21
+bbcode_enabled = true
+text = "  ,----..     ,--,                                 ,---,     
+ /   /   \\  ,--.'|                               ,--.' |     
+|   :     : |  | :                               |  |  :     
+.   |  ;. / :  : '                    .--.--.    :  :  :     
+.   ; /--`  |  ' |       ,--.--.     /  /    '   :  |  |,--. 
+;   | ;     '  | |      /       \\   |  :  /`./   |  :  '   | 
+|   : |     |  | :     .--.  .-. |  |  :  ;_     |  |   /' : 
+.   | '___  '  : |__    \\__\\/: . .   \\  \\    `.  '  :  | | | 
+'   ; : .'| |  | '.'|   ,\" .--.; |    `----.   \\ |  |  ' | : 
+'   | '/  : ;  :    ;  /  /  ,.  |   /  /`--'  / |  :  :_:,' 
+|   :    /  |  ,   /  ;  :   .'   \\ '--'.     /  |  | ,'     
+ \\   \\ .'    ---`-'   |  ,     .-./   `--'---'   `--''       
+  `---`                `--`---'                           "
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+z_index = 100
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 1
+
+[node name="FunctionBar" type="HBoxContainer" parent="MarginContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 2
+
+[node name="Button_Wakeup" type="Button" parent="MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("4_yvwqi")
+action_mode = 0
+shortcut = SubResource("Shortcut_ijd5d")
+text = "1) 醒来"
+flat = true
+
+[node name="Button_Continue" type="Button" parent="MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("4_yvwqi")
+shortcut = SubResource("Shortcut_51m77")
+text = "2) 返回监狱"
+flat = true
+
+[node name="Button_Exit" type="Button" parent="MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("4_yvwqi")
+shortcut = SubResource("Shortcut_t1s3o")
+text = "3) 退出"
+flat = true

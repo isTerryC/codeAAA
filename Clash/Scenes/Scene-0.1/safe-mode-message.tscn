@@ -1,0 +1,221 @@
+[gd_scene load_steps=20 format=3 uid="uid://cffnmysa5fa1p"]
+
+[ext_resource type="Script" uid="uid://cqqq8mih5jeum" path="res://Clash/Scripts/Scene-0.1/safe_mode.gd" id="1_6aai6"]
+[ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_67dt6"]
+[ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="3_jinbt"]
+[ext_resource type="Script" uid="uid://c3w1dqbw736g7" path="res://Clash/Scripts/Scene-0.1/small_windows.gd" id="4_67dt6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6aai6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67dt6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jinbt"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7hy2"]
+bg_color = Color(0.15, 0.17, 0.2, 1)
+
+[sub_resource type="InputEventKey" id="InputEventKey_4687j"]
+device = -1
+keycode = 65
+unicode = 65
+
+[sub_resource type="Shortcut" id="Shortcut_itnxx"]
+events = [SubResource("InputEventKey_4687j")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_73ej5"]
+device = -1
+keycode = 77
+unicode = 109
+
+[sub_resource type="Shortcut" id="Shortcut_tx0y0"]
+events = [SubResource("InputEventKey_73ej5")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_flmsc"]
+device = -1
+keycode = 70
+unicode = 102
+
+[sub_resource type="Shortcut" id="Shortcut_nibv5"]
+events = [SubResource("InputEventKey_flmsc")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_qkbua"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_qlojq"]
+events = [SubResource("InputEventKey_qkbua")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_gds8e"]
+device = -1
+keycode = 67
+unicode = 99
+
+[sub_resource type="Shortcut" id="Shortcut_8gbqc"]
+events = [SubResource("InputEventKey_gds8e")]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_itnxx"]
+bg_color = Color(0.144285, 0.163749, 0.192944, 1)
+
+[node name="Safe-mode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6aai6")
+
+[node name="BorderLine" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label_Up" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 60.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_6aai6")
+
+[node name="Label_Middle" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 1152.0
+offset_bottom = 582.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_67dt6")
+
+[node name="Label_Down" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jinbt")
+
+[node name="MainUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="BackGround" type="Panel" parent="MainUI"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d7hy2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainUI"]
+layout_mode = 1
+offset_left = 271.0
+offset_top = 169.0
+offset_right = 934.0
+offset_bottom = 457.0
+theme_override_fonts/normal_font = ExtResource("2_67dt6")
+theme_override_font_sizes/normal_font_size = 21
+bbcode_enabled = true
+text = "  ,----..     ,--,                                 ,---,     
+ /   /   \\  ,--.'|                               ,--.' |     
+|   :     : |  | :                               |  |  :     
+.   |  ;. / :  : '                    .--.--.    :  :  :     
+.   ; /--`  |  ' |       ,--.--.     /  /    '   :  |  |,--. 
+;   | ;     '  | |      /       \\   |  :  /`./   |  :  '   | 
+|   : |     |  | :     .--.  .-. |  |  :  ;_     |  |   /' : 
+.   | '___  '  : |__    \\__\\/: . .   \\  \\    `.  '  :  | | | 
+'   ; : .'| |  | '.'|   ,\" .--.; |    `----.   \\ |  |  ' | : 
+'   | '/  : ;  :    ;  /  /  ,.  |   /  /`--'  / |  :  :_:,' 
+|   :    /  |  ,   /  ;  :   .'   \\ '--'.     /  |  | ,'     
+ \\   \\ .'    ---`-'   |  ,     .-./   `--'---'   `--''       
+  `---`                `--`---'                           "
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MainUI"]
+z_index = 100
+layout_mode = 2
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 1
+
+[node name="FunctionBar" type="HBoxContainer" parent="MainUI/MarginContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 2
+
+[node name="Button_Archive" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("3_jinbt")
+action_mode = 0
+shortcut = SubResource("Shortcut_itnxx")
+text = "A) 档案"
+flat = true
+
+[node name="Button_Mailbox" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("3_jinbt")
+shortcut = SubResource("Shortcut_tx0y0")
+text = "M) 信箱"
+flat = true
+
+[node name="Button_Files" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("3_jinbt")
+shortcut = SubResource("Shortcut_nibv5")
+text = "F) 文件"
+flat = true
+
+[node name="Button_Network" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("3_jinbt")
+shortcut = SubResource("Shortcut_qlojq")
+text = "N) 网络"
+flat = true
+
+[node name="Button_Command" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("3_jinbt")
+shortcut = SubResource("Shortcut_8gbqc")
+text = "C) 命令行
+"
+flat = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 88.0
+offset_right = 1147.0
+offset_bottom = 172.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_itnxx")
+script = ExtResource("4_67dt6")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 114.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 40
+text = "您有新的邮件"
+
+[connection signal="pressed" from="MainUI/MarginContainer/FunctionBar/Button_Mailbox" to="." method="_on_button_mailbox_pressed"]

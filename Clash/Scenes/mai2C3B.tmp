@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=3 uid="uid://cosl5pqpshv84"]
+
+[ext_resource type="Script" path="res://Clash-main/Scripts/UIManager.gd" id="1_uvvb1"]
+[ext_resource type="PackedScene" uid="uid://cqwjunlehe1t2" path="res://Clash-main/Scenes/ui_mail.tscn" id="2_mhl0u"]
+[ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash-main/Themes/button.tres" id="2_w03e6"]
+[ext_resource type="FontFile" uid="uid://cp026qhwwjx8c" path="res://fonts/0xProtoNerdFontMono-Bold.ttf" id="3_dynpb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxbk"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[sub_resource type="InputEventKey" id="InputEventKey_4687j"]
+device = -1
+keycode = 65
+unicode = 65
+
+[sub_resource type="Shortcut" id="Shortcut_047an"]
+events = [SubResource("InputEventKey_4687j")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_73ej5"]
+device = -1
+keycode = 77
+unicode = 109
+
+[sub_resource type="Shortcut" id="Shortcut_bsobg"]
+events = [SubResource("InputEventKey_73ej5")]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 0
+
+[node name="MainUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_uvvb1")
+mail_ui = ExtResource("2_mhl0u")
+
+[node name="BackGround" type="Panel" parent="MainUI"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ekxbk")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainUI"]
+layout_mode = 2
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 6
+
+[node name="FunctionBar" type="HBoxContainer" parent="MainUI/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 2
+
+[node name="Button_Archive" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("2_w03e6")
+action_mode = 0
+shortcut = SubResource("Shortcut_047an")
+text = "A) 档案"
+flat = true
+
+[node name="Button_Mailbox" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("2_w03e6")
+shortcut = SubResource("Shortcut_bsobg")
+text = "M) 信箱"
+flat = true
+
+[node name="Button_Files" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("2_w03e6")
+text = "F) 文件"
+flat = true
+
+[node name="Button_Network" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("2_w03e6")
+text = "N) 网络"
+flat = true
+
+[node name="Button_Command" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("2_w03e6")
+text = "C) 命令行
+"
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainUI"]
+layout_mode = 1
+offset_left = 278.0
+offset_top = 192.0
+offset_right = 921.0
+offset_bottom = 458.0
+theme_override_fonts/normal_font = ExtResource("3_dynpb")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "  ,----..     ,--,                                 ,---,     
+ /   /   \\  ,--.'|                               ,--.' |     
+|   :     : |  | :                               |  |  :     
+.   |  ;. / :  : '                    .--.--.    :  :  :     
+.   ; /--`  |  ' |       ,--.--.     /  /    '   :  |  |,--. 
+;   | ;     '  | |      /       \\   |  :  /`./   |  :  '   | 
+|   : |     |  | :     .--.  .-. |  |  :  ;_     |  |   /' : 
+.   | '___  '  : |__    \\__\\/: . .   \\  \\    `.  '  :  | | | 
+'   ; : .'| |  | '.'|   ,\" .--.; |    `----.   \\ |  |  ' | : 
+'   | '/  : ;  :    ;  /  /  ,.  |   /  /`--'  / |  :  :_:,' 
+|   :    /  |  ,   /  ;  :   .'   \\ '--'.     /  |  | ,'     
+ \\   \\ .'    ---`-'   |  ,     .-./   `--'---'   `--''       
+  `---`                `--`---'                           "
+
+[connection signal="pressed" from="MainUI/MarginContainer/FunctionBar/Button_Mailbox" to="MainUI" method="_on_button_mailbox_pressed"]
