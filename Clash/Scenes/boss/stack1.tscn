@@ -1,0 +1,151 @@
+[gd_scene load_steps=10 format=3 uid="uid://dhua77j1bhcll"]
+
+[ext_resource type="Script" uid="uid://d1fwy0bgmwxn3" path="res://Clash/Scripts/hack/stack.gd" id="1_d31h7"]
+[ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="2_qvn84"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgny2"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sod2x"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrm1q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2b3f"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 6
+
+[sub_resource type="InputEventKey" id="InputEventKey_flmsc"]
+device = -1
+keycode = 51
+unicode = 51
+
+[sub_resource type="InputEventKey" id="InputEventKey_thxl2"]
+device = -1
+keycode = 4194441
+unicode = 51
+
+[sub_resource type="Shortcut" id="Shortcut_t1s3o"]
+events = [SubResource("InputEventKey_flmsc"), SubResource("InputEventKey_thxl2")]
+
+[node name="TerminalUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_d31h7")
+
+[node name="BackGround" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pgny2")
+
+[node name="BorderLine" type="Control" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label_Up" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 60.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_sod2x")
+
+[node name="Label_Middle" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 1152.0
+offset_bottom = 582.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wrm1q")
+
+[node name="Label_Down" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_t2b3f")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+z_index = 100
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 1
+
+[node name="FunctionBar" type="HBoxContainer" parent="MarginContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 2
+
+[node name="Button_Exit" type="Button" parent="MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("2_qvn84")
+shortcut = SubResource("Shortcut_t1s3o")
+shortcut_in_tooltip = false
+text = "退出"
+flat = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 78.0
+offset_right = 545.0
+offset_bottom = 601.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "int vuln()
+{
+  int result; // eax
+  int i; // [rsp+Ch] [rbp-44h]
+  _QWORD buf[8]; // [rsp+10h] [rbp-40h] BYREF
+
+  buf[7] = __readfsqword(0x28u);
+  memset(buf, 0, 48);
+  for ( i = 0; i <= 2; ++i )
+  {
+    read(0, buf, 0x30uLL);
+    printf((const char *)buf);
+    result = (unsigned int)memset(buf, 0, 0x30uLL);
+  }
+  return result;
+}"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 132.0
+offset_right = 1046.0
+offset_bottom = 465.0
+theme_override_font_sizes/normal_font_size = 30
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 472.0
+offset_right = 1047.0
+offset_bottom = 522.0
+theme_override_font_sizes/font_size = 30
+placeholder_text = "输入payload"
+
+[connection signal="pressed" from="MarginContainer/FunctionBar/Button_Exit" to="." method="_on_button_exit_pressed"]

@@ -7,9 +7,12 @@ class FileSystemNode:
 	var permissions: String
 	var content: String = ""
 	var children: Array = []
+	var theme_color: Color = Color.WHITE  # 新增主题颜色字段
 
 var fs_root: FileSystemNode
 var current_path: Array = []  # 当前路径，例如 ["home", "user"]
+
+var current_config_path: String = ""  # 记录当前配置文件路径
 #res://files/filesystem.json
 # 初始化文件系统
 func _ready():
@@ -104,6 +107,8 @@ func execute_command(cmd: String) -> String:
 			return ""  # 返回空字符串，不在终端显示内容
 		"hack":
 			return handle_hack(args)
+		"connect":
+			return handle_connect(args)
 		_:
 			return "Command not found: %s" % args[0]
 
@@ -174,10 +179,30 @@ func _deferred_scene_change(port: String) -> void:
 	match port:
 		"143":
 			get_tree().change_scene_to_file("res://Clash/Scenes/boss/SQL.tscn")
-		"80":
-			get_tree().change_scene_to_file("res://Clash/Scenes/web/AdminPanel.tscn")
-		"443":
-			get_tree().change_scene_to_file("res://Clash/Scenes/secure/SSH.tscn")
+
+var IPS: Array = ["1337.1337.1337.1337"]
+
+# TerminalSystem.gd 中的 handle_hack 函数
+func handle_connect(args: Array) -> String:
+	if args.size() < 2:
+		return "Usage: connect <IP>"
+	
+	var IPs = args[1]
+	if(not _deferred_IP_change(IPs)):
+		return "Initializing IP %s ..." % IPs
+	else:
+		return "Connection established. Ready for commands."
+
+func _deferred_IP_change(IPs: String) -> bool:
+	match IPs:
+		"1337.1337.1337.1337":
+			load_filesystem("res://files/D.json")
+			return true
+		"locel":
+			load_filesystem("res://files/filesystem.json")
+			return true
+		_:
+			return false
 
 # --- 辅助函数 ---
 # 解析路径（支持相对路径和绝对路径）

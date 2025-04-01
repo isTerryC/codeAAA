@@ -1,0 +1,52 @@
+{
+	"name": "/",
+	"type": "dir",
+	"permissions": "rwxr-xr-x",
+	"children": [
+		{
+			"name": "home",
+			"type": "dir",
+			"permissions": "rwxr-xr-x",
+			"children": [
+				{
+					"name": "user",
+					"type": "dir",
+					"permissions": "rwxr-xr-x",
+					"children": [
+						{
+							"name": "readme.txt",
+							"type": "file",
+							"content": "Welcome to HackerOS!\nUse 'man' for help.",
+							"permissions": "rw-r--r--"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "bin",
+			"type": "dir",
+			"permissions": "rwxr-xr-x",
+			"children": [
+				{
+					"name": "ls",
+					"type": "executable",
+					"permissions": "rwxr-xr-x"
+				}
+			]
+		},
+		{
+			"name": "file",
+			"type": "dir",
+			"permissions": "rwxr-xr-x",
+			"children": [
+				{
+					"name": "readme.txt",
+					"type": "file",
+					"content": "Welcome to HackerOS!\nUse 'man' for help.",
+					"permissions": "rwxr-xr-x"
+				}
+			]
+		}
+	]
+}
