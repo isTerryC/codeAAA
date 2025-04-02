@@ -19,13 +19,12 @@ func _ChangeScene(num:String) -> void:
 func _on_mail_01_pressed() -> void:
 	_ChangeScene("01")
 
-
 func _on_mail_02_pressed() -> void:
 	_ChangeScene("02")
 
+func _on_mail_03_pressed() -> void:
+	_ChangeScene("03")
+
 
 func _on_button_escape_pressed() -> void:
-	if(G.flag!=0):
-		get_tree().change_scene_to_file("res://Clash/Scenes/UI/main.tscn")
-	else:
-		get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode-message.tscn")
+	get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode-message.tscn")

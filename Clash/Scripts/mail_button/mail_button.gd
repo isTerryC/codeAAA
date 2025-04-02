@@ -19,12 +19,24 @@ func _on_flag_changed() -> void:
 	_changeVisibility(g_script.flag)
 
 func _changeVisibility(flag: int) -> void:
-	if (flag == 0):
-		$Mail_01.visible = true
-		$Mail_02.visible = false
-	elif (flag == 1):
-		$Mail_01.visible = false
-		$Mail_02.visible = true
+	# 自动收集所有Mail节点（支持任意数量）
+	var mail_nodes = []
+	var i = 1
+	while true:
+		var node = get_node_or_null("Mail_%02d" % i)
+		if node:
+			mail_nodes.append(node)
+			i += 1
+		else:
+			break
+	
+	# 确保flag在有效范围内
+	var max_flag = mail_nodes.size() - 1
+	var safe_flag = clamp(flag, 0, max_flag)
+	
+	# 使用循环设置可见性
+	for index in mail_nodes.size():
+		mail_nodes[index].visible = (index <= safe_flag)
 		
 func _hide_buttons(container: Node) -> void:
 	for node in container.get_children():

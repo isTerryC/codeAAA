@@ -1,10 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://bkf8njly4ugg6"]
+[gd_scene load_steps=12 format=3 uid="uid://cyomewa4e1wnu"]
 
-[ext_resource type="Script" uid="uid://dhnouna386157" path="res://Clash/Scenes/message/Mail_Content.gd" id="1_nmbq0"]
-[ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="1_vvhwa"]
-[ext_resource type="Theme" uid="uid://br0jxh21imded" path="res://Clash/Themes/select_button.tres" id="2_nmbq0"]
-[ext_resource type="Theme" uid="uid://csgsl6vjl801d" path="res://Clash/Themes/Mail_Themes/Head_text.tres" id="3_qp8mg"]
-[ext_resource type="Theme" uid="uid://dc1rq74skik8d" path="res://Clash/Themes/Mail_Themes/Content_text.tres" id="4_sfguk"]
+[ext_resource type="Script" uid="uid://dhnouna386157" path="res://Clash/Scenes/message/Mail_Content.gd" id="1_6xvmu"]
+[ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_y6mub"]
+[ext_resource type="Theme" uid="uid://br0jxh21imded" path="res://Clash/Themes/select_button.tres" id="3_mcbtq"]
+[ext_resource type="Theme" uid="uid://csgsl6vjl801d" path="res://Clash/Themes/Mail_Themes/Head_text.tres" id="4_tek8f"]
+[ext_resource type="Theme" uid="uid://dc1rq74skik8d" path="res://Clash/Themes/Mail_Themes/Content_text.tres" id="5_sw101"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrlmc"]
 bg_color = Color(0.156863, 0.172549, 0.203922, 1)
@@ -44,7 +44,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_nmbq0")
+script = ExtResource("1_6xvmu")
 
 [node name="MainUI" type="Control" parent="."]
 layout_mode = 3
@@ -65,7 +65,7 @@ offset_left = 288.0
 offset_top = 192.0
 offset_right = 944.0
 offset_bottom = 480.0
-theme_override_fonts/normal_font = ExtResource("1_vvhwa")
+theme_override_fonts/normal_font = ExtResource("2_y6mub")
 theme_override_font_sizes/normal_font_size = 21
 bbcode_enabled = true
 text = "  ,----..     ,--,                                 ,---,     
@@ -113,7 +113,7 @@ alignment = 2
 
 [node name="Head_Label" type="Button" parent="BorderLine/Label_Up/MarginContainer/FunctionBar"]
 layout_mode = 2
-theme = ExtResource("2_nmbq0")
+theme = ExtResource("3_mcbtq")
 shortcut = SubResource("Shortcut_nujo1")
 text = "信箱"
 flat = true
@@ -149,28 +149,32 @@ theme_override_constants/separation = 15
 
 [node name="Head" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3_qp8mg")
-text = "工作指示"
+theme = ExtResource("4_tek8f")
+text = "你好啊，我是D"
 fit_content = true
 
 [node name="Information" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4_sfguk")
+theme = ExtResource("5_sw101")
 theme_override_font_sizes/normal_font_size = 21
-text = "发自： 典狱长<转载>"
+text = "发自： D"
 fit_content = true
 
 [node name="Content" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4_sfguk")
-text = "K囚犯，今天是你作为监狱信息系统处理员的第一天，先看看系统吧。
-记住，帮助狱警们使用电脑完成工作是你的任务。"
+theme = ExtResource("5_sw101")
+text = "你好K,我是D。
+我知道你是为什么进去的。我是一个黑客。
+我能带你出去。当然，回报是监狱里的信息。
+因为典狱长跟市长候选A有点交易。
+要不然A他怎么会把你送到这偏远的监狱。
+你可没有时间考虑。"
 fit_content = true
 
 [node name="Content2" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4_sfguk")
-text = "****监狱"
+theme = ExtResource("5_sw101")
+text = "D"
 fit_content = true
 horizontal_alignment = 2
 
@@ -197,7 +201,7 @@ alignment = 2
 
 [node name="Button_Escape" type="Button" parent="BorderLine/Label_Down/MarginContainer/FunctionBar"]
 layout_mode = 2
-theme = ExtResource("2_nmbq0")
+theme = ExtResource("3_mcbtq")
 shortcut = SubResource("Shortcut_nujo1")
 text = "Esc) 返回"
 flat = true

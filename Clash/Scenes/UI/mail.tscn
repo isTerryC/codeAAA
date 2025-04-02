@@ -151,14 +151,21 @@ script = ExtResource("4_xhro2")
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme = ExtResource("2_wrlmc")
-text = "Mail01"
+text = "Error:环境执行问题"
 alignment = 0
 
 [node name="Mail_02" type="Button" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme = ExtResource("2_wrlmc")
-text = "Mail02"
+text = "工作指示"
+alignment = 0
+
+[node name="Mail_03" type="Button" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("2_wrlmc")
+text = "你好啊，我是D"
 alignment = 0
 
 [node name="Label_Down" type="Label" parent="BorderLine"]
@@ -191,4 +198,5 @@ flat = true
 
 [connection signal="pressed" from="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer/Mail_01" to="." method="_on_mail_01_pressed"]
 [connection signal="pressed" from="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer/Mail_02" to="." method="_on_mail_02_pressed"]
+[connection signal="pressed" from="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer/Mail_03" to="." method="_on_mail_03_pressed"]
 [connection signal="pressed" from="BorderLine/Label_Down/MarginContainer/FunctionBar/Button_Escape" to="." method="_on_button_escape_pressed"]

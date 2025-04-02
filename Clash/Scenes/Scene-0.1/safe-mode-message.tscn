@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cffnmysa5fa1p"]
+[gd_scene load_steps=18 format=3 uid="uid://cffnmysa5fa1p"]
 
 [ext_resource type="Script" uid="uid://bw7m583c1j0br" path="res://Clash/Scripts/Scene-0.1/safe_mode.gd" id="1_6aai6"]
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_67dt6"]
@@ -44,14 +44,6 @@ unicode = 109
 
 [sub_resource type="Shortcut" id="Shortcut_tx0y0"]
 events = [SubResource("InputEventKey_73ej5")]
-
-[sub_resource type="InputEventKey" id="InputEventKey_flmsc"]
-device = -1
-keycode = 70
-unicode = 102
-
-[sub_resource type="Shortcut" id="Shortcut_nibv5"]
-events = [SubResource("InputEventKey_flmsc")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_qkbua"]
 device = -1
@@ -178,13 +170,6 @@ shortcut = SubResource("Shortcut_tx0y0")
 text = "M) 信箱"
 flat = true
 
-[node name="Button_Files" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
-layout_mode = 2
-theme = ExtResource("3_jinbt")
-shortcut = SubResource("Shortcut_nibv5")
-text = "F) 文件"
-flat = true
-
 [node name="Button_Network" type="Button" parent="MainUI/MarginContainer/FunctionBar"]
 layout_mode = 2
 theme = ExtResource("3_jinbt")
@@ -219,3 +204,5 @@ theme_override_font_sizes/font_size = 40
 text = "您有新的邮件"
 
 [connection signal="pressed" from="MainUI/MarginContainer/FunctionBar/Button_Mailbox" to="." method="_on_button_mailbox_pressed"]
+[connection signal="pressed" from="MainUI/MarginContainer/FunctionBar/Button_Network" to="." method="_on_button_network_pressed"]
+[connection signal="pressed" from="MainUI/MarginContainer/FunctionBar/Button_Command" to="." method="_on_button_command_pressed"]

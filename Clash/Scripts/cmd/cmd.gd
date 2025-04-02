@@ -47,7 +47,10 @@ func update_prompt():
 	path_label.text = "user@%s:%s$ " % [terminal_system.hostname, path_str]
 
 func _on_button_exit_pressed() -> void:
-	get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode.tscn")
+	if(G.flag<2):
+		G.update_flag(2)
+		G.set_scannable_temporary()
+	get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode-message.tscn")
 	
 func _on_clear_requested():
 	output_label.text = ""

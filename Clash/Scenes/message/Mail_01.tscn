@@ -150,32 +150,27 @@ theme_override_constants/separation = 15
 [node name="Head" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_fwd07")
-text = "Mail01"
+text = "Error:环境执行问题"
 fit_content = true
 
 [node name="Information" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_ra70r")
 theme_override_font_sizes/normal_font_size = 21
-text = "发自： code-d@psmail.com()"
+text = "发自： From: 张（狱警工号：JY-0375） <zhangqiang@prison.internal>"
 fit_content = true
 
 [node name="Content" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_ra70r")
-text = "这是内容
-这是内容
-这是内容
-这是内容
-这是内容
-这是内容
-这是内容"
+text = "监狱服务器系统故障，现已全部重启并恢复功能。
+可以正常执行工作。"
 fit_content = true
 
 [node name="Content2" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_ra70r")
-text = "署名"
+text = "****监狱"
 fit_content = true
 horizontal_alignment = 2
 

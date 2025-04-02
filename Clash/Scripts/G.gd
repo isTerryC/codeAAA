@@ -44,9 +44,39 @@ func load_hack_scene(port: int) -> void:
 	# 邮箱 Mail 相关代码
 signal flag_changed
 	
-var flag:int = 0
+var flag:int = -1
+var c: int = 0
 	
 func update_flag(new_flag: int) -> void:
 	flag = new_flag
+	c = 0
 	# 当 flag 变化时，发出信号
 	flag_changed.emit()
+	
+func add_c() -> void:
+	c = 1
+	
+var scannable := 0
+var _scannable_timer: Timer = null
+
+func set_scannable_temporary() -> void:
+	scannable = 1
+	
+	if _scannable_timer:
+		_scannable_timer.stop()
+		_scannable_timer.queue_free()
+	
+	_scannable_timer = Timer.new()
+	_scannable_timer.wait_time = 10.0
+	_scannable_timer.one_shot = true
+	
+	_scannable_timer.timeout.connect(_on_scannable_timeout)
+	
+	add_child(_scannable_timer)
+	_scannable_timer.start()
+
+func _on_scannable_timeout() -> void:
+	scannable = 0
+	if _scannable_timer:
+		_scannable_timer.queue_free()
+		_scannable_timer = null
