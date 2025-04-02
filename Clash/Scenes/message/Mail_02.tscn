@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://ckpwvufobw20p"]
+[gd_scene load_steps=12 format=3 uid="uid://bkf8njly4ugg6"]
 
-[ext_resource type="Script" uid="uid://cqgjrp5l461uc" path="res://addons/dialogic/Resources/mail.gd" id="1_roedv"]
-[ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_clqw0"]
-[ext_resource type="Theme" uid="uid://br0jxh21imded" path="res://Clash/Themes/select_button.tres" id="2_wrlmc"]
-[ext_resource type="Script" uid="uid://puovvyfvpoei" path="res://Clash/Scripts/mail_button/mail_button.gd" id="4_xhro2"]
+[ext_resource type="Script" uid="uid://dhnouna386157" path="res://Clash/Scenes/message/Mail_Content.gd" id="1_nmbq0"]
+[ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="1_vvhwa"]
+[ext_resource type="Theme" uid="uid://br0jxh21imded" path="res://Clash/Themes/select_button.tres" id="2_nmbq0"]
+[ext_resource type="Theme" uid="uid://csgsl6vjl801d" path="res://Clash/Themes/Mail_Themes/Head_text.tres" id="3_qp8mg"]
+[ext_resource type="Theme" uid="uid://dc1rq74skik8d" path="res://Clash/Themes/Mail_Themes/Content_text.tres" id="4_sfguk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrlmc"]
 bg_color = Color(0.156863, 0.172549, 0.203922, 1)
@@ -36,14 +37,14 @@ border_width_top = 3
 border_width_right = 6
 border_width_bottom = 6
 
-[node name="mail" type="Control"]
+[node name="Mail_Base" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_roedv")
+script = ExtResource("1_nmbq0")
 
 [node name="MainUI" type="Control" parent="."]
 layout_mode = 3
@@ -64,7 +65,7 @@ offset_left = 288.0
 offset_top = 192.0
 offset_right = 944.0
 offset_bottom = 480.0
-theme_override_fonts/normal_font = ExtResource("2_clqw0")
+theme_override_fonts/normal_font = ExtResource("1_vvhwa")
 theme_override_font_sizes/normal_font_size = 21
 bbcode_enabled = true
 text = "  ,----..     ,--,                                 ,---,     
@@ -112,7 +113,7 @@ alignment = 2
 
 [node name="Head_Label" type="Button" parent="BorderLine/Label_Up/MarginContainer/FunctionBar"]
 layout_mode = 2
-theme = ExtResource("2_wrlmc")
+theme = ExtResource("2_nmbq0")
 shortcut = SubResource("Shortcut_nujo1")
 text = "信箱"
 flat = true
@@ -142,24 +143,41 @@ horizontal_scroll_mode = 0
 vertical_scroll_mode = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer"]
-custom_minimum_size = Vector2(900, 410)
+custom_minimum_size = Vector2(950, 410)
 layout_mode = 2
 theme_override_constants/separation = 15
-script = ExtResource("4_xhro2")
 
-[node name="Mail_01" type="Button" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 60)
+[node name="Head" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_wrlmc")
-text = "Mail01"
-alignment = 0
-
-[node name="Mail_02" type="Button" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 60)
-layout_mode = 2
-theme = ExtResource("2_wrlmc")
+theme = ExtResource("3_qp8mg")
 text = "Mail02"
-alignment = 0
+fit_content = true
+
+[node name="Information" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_sfguk")
+theme_override_font_sizes/normal_font_size = 21
+text = "发自： code-d@psmail.com()"
+fit_content = true
+
+[node name="Content" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_sfguk")
+text = "这是内容
+这是内容
+这是内容
+这是内容
+这是内容
+这是内容
+这是内容"
+fit_content = true
+
+[node name="Content2" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_sfguk")
+text = "署名"
+fit_content = true
+horizontal_alignment = 2
 
 [node name="Label_Down" type="Label" parent="BorderLine"]
 layout_mode = 0
@@ -184,10 +202,9 @@ alignment = 2
 
 [node name="Button_Escape" type="Button" parent="BorderLine/Label_Down/MarginContainer/FunctionBar"]
 layout_mode = 2
-theme = ExtResource("2_wrlmc")
+theme = ExtResource("2_nmbq0")
 shortcut = SubResource("Shortcut_nujo1")
 text = "Esc) 返回"
 flat = true
 
-[connection signal="pressed" from="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer/Mail_01" to="." method="_on_mail_01_pressed"]
-[connection signal="pressed" from="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer/Mail_02" to="." method="_on_mail_02_pressed"]
+[connection signal="pressed" from="BorderLine/Label_Down/MarginContainer/FunctionBar/Button_Escape" to="." method="_on_button_escape_pressed"]

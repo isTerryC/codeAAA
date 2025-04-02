@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://qsqaecr5cy8a"]
+[gd_scene load_steps=12 format=3 uid="uid://qsqaecr5cy8a"]
 
+[ext_resource type="Script" uid="uid://dhnouna386157" path="res://Clash/Scenes/message/Mail_Content.gd" id="1_5403e"]
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="1_top2r"]
 [ext_resource type="Theme" uid="uid://br0jxh21imded" path="res://Clash/Themes/select_button.tres" id="2_m1bv8"]
 [ext_resource type="Theme" uid="uid://csgsl6vjl801d" path="res://Clash/Themes/Mail_Themes/Head_text.tres" id="3_fwd07"]
@@ -43,6 +44,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5403e")
 
 [node name="MainUI" type="Control" parent="."]
 layout_mode = 3
@@ -148,7 +150,7 @@ theme_override_constants/separation = 15
 [node name="Head" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_fwd07")
-text = "标题"
+text = "Mail01"
 fit_content = true
 
 [node name="Information" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
@@ -204,3 +206,5 @@ theme = ExtResource("2_m1bv8")
 shortcut = SubResource("Shortcut_nujo1")
 text = "Esc) 返回"
 flat = true
+
+[connection signal="pressed" from="BorderLine/Label_Down/MarginContainer/FunctionBar/Button_Escape" to="." method="_on_button_escape_pressed"]

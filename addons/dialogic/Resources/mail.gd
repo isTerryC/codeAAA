@@ -11,17 +11,14 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_button_esc_pressed() -> void:
-	get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode.tscn")  # 切换到游戏场景
+
+func _ChangeScene(num:String) -> void:
+	get_tree().change_scene_to_file("res://Clash/Scenes/message/Mail_"+num+".tscn")
+	
+
+func _on_mail_01_pressed() -> void:
+	_ChangeScene("01")
 
 
-func _on_message_3_pressed() -> void:
-	get_tree().change_scene_to_file("res://Clash/Scenes/message/message3.tscn")  # 切换游戏场景
-
-
-func _on_message_2_pressed() -> void:
-	get_tree().change_scene_to_file("res://Clash/Scenes/message/message2.tscn")  # 切换游戏场景
-
-
-func _on_message_pressed() -> void:
-	get_tree().change_scene_to_file("res://Clash/Scenes/message/message1.tscn")  # 切换游戏场景
+func _on_mail_02_pressed() -> void:
+	_ChangeScene("02")

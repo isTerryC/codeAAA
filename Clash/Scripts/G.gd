@@ -38,3 +38,15 @@ func load_hack_scene(port: int) -> void:
 		instance.call_deferred("initialize")
 	else:
 		push_error("场景实例化失败：%s" % scene_path)
+
+
+
+	# 邮箱 Mail 相关代码
+signal flag_changed
+	
+var flag:int = 0
+	
+func update_flag(new_flag: int) -> void:
+	flag = new_flag
+	# 当 flag 变化时，发出信号
+	flag_changed.emit()
