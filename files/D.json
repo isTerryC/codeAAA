@@ -32,6 +32,16 @@
 					"name": "ls",
 					"type": "executable",
 					"permissions": "rwxr-xr-x"
+				},
+				{
+					"name": "hack",
+					"type": "executable",
+					"permissions": "rwxr-xr-x"
+				},
+				{
+					"name": "ftp",
+					"type": "executable",
+					"permissions": "rwxr-xr-x"
 				}
 			]
 		},
@@ -41,9 +51,79 @@
 			"permissions": "rwxr-xr-x",
 			"children": [
 				{
-					"name": "readme.txt",
+					"name": "test",
 					"type": "file",
-					"content": "Welcome to HackerOS!\nUse 'man' for help.",
+					"content": "From: sysadmin@cityhall.cn
+To: delta@bbs.nightowl.cn
+Subject: 圣诞树灯测试
+X-Client: Pine 3.96  
+
+监控系统调试完成（项目编号E1997X），建议采用COBOL日志覆盖方案。
+特别提醒：候选人健康档案的DBF文件需用S195密钥解密",
+					"permissions": "rwxr-xr-x"
+				},
+				{
+					"name": "SHIFT",
+					"type": "file",
+					"content": "From: ██████ <黑名单过滤>
+To: D
+Subject: Re: 食堂排班异常
+X-Mailer: Eudora 3.0  
+
+通过FTP获取的SQL凭据已验证，执行路径：  
+
+在图书管理系统植入video_check.asm
+触发时间窗口：每日17:30-17:35（清洁工RFID失效期）
+警告：避免直接修改VT420终端日志，采用ffmpeg帧替换方案
+附件密码：ESCape_平面图坐标 -> Hex转ASCII可得逃生通道 ",
+					"permissions": "rwxr-xr-x"
+				},
+				{
+					"name": "listen",
+					"type": "file",
+					"content": "From: alex@bbs.tech.cn
+To: D
+Subject: Project Cobol Talent Transfer
+X-Client: Elm 2.4
+Date: 19██-05-06 04:30:11
+
+-----BEGIN MESSAGE-----
+V2Ugc3Ryb25nbHkgc3VnZ2VzdCB0cmFuc2ZlcnJpbmcga2V5
+IHJlc291cmNlIEsgdG8gQWxleCB3b3JraW5nIGdyb3VwLiAg
+ClRlY2huaWNhbCBzdXBwb3J0IGd1YXJhbnRlZWQgcGVyIE1J
+VC9MTCBzdGFuZGFyZHMKCk9wZXJhdGlvbmFsIHJlcXVpcmVt
+ZW50czogIAoxIEFjdGl2YXRlIENPQk9MIGJhY2tkb29yIGlu
+IEsncyB3b3Jrc3RhdGlvbgoyIFRyaWdnZXIgYnVmZmVyIG92
+ZXJmbG93IGR1cmluZyBuZXh0IHBheXJvbGwgdmVyaWZpY2F0
+aW9uICAKMyBVcGxvYWQgY29yZSBkdW1wIHRvIGZ0cDovL2Fs
+ZXg6W1JFREFDVEVEXUBwaGFsYW54LmVzY2FwZTE5OTgKCmlm
+IHlvdSBhcmUgcmVhZGluZyB0aGlzLGRvd25sb2FkIHRoZSBm
+aWxlICwgd2UgYXJlIHdhdGNoaW5nLgpE
+-----END  MESSAGE-----  ",
+					"permissions": "rwxr-xr-x"
+				},
+				{
+					"name": "answer",
+					"type": "file",
+					"content": "From: ██████ <黑名单过滤>
+To: D
+Subject: 系统优化进度确认
+X-Priority: 1 (High)
+X-Mailer: Pegasus Mail 2.55
+Date: 19██/04/17 23:59:41
+
+D同志：  
+
+市立图书馆的「COBOL系统维护专项」已划拨第3期经费（详见附件JOB61.BAT），请确保数据清洗工作在本周五前完成。  
+
+特别注意：  
+
+档案室VT420终端的1997借阅记录（分类号A_Mayor）需做技术性调整
+健康监测系统的Solaris漏洞补丁建议暂缓发布
+机房温控日志中6号柜的异常断电记录必须永久隔离
+市委将全力支持你在信息化建设处的晋升评估，包括你儿子在MIT的特招资格。
+但若周日前未收到SHA1校验码，审计组可能会重新审查去年ftp://██████的匿名上传记录。
+",
 					"permissions": "rwxr-xr-x"
 				}
 			]
