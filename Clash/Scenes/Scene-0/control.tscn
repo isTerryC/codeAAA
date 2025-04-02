@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d23og7kw5eme6"]
+[gd_scene load_steps=16 format=3 uid="uid://d23og7kw5eme6"]
 
 [ext_resource type="Script" uid="uid://dmot28d6gwwdi" path="res://Clash/Scripts/Scene-0/control.gd" id="1_yx0jc"]
 [ext_resource type="Theme" uid="uid://dkvdqg7gg4au1" path="res://Clash/Themes/head_text.tres" id="2_1anb3"]
@@ -55,19 +55,6 @@ unicode = 50
 
 [sub_resource type="Shortcut" id="Shortcut_51m77"]
 events = [SubResource("InputEventKey_73ej5"), SubResource("InputEventKey_nw5d4")]
-
-[sub_resource type="InputEventKey" id="InputEventKey_flmsc"]
-device = -1
-keycode = 51
-unicode = 51
-
-[sub_resource type="InputEventKey" id="InputEventKey_thxl2"]
-device = -1
-keycode = 4194441
-unicode = 51
-
-[sub_resource type="Shortcut" id="Shortcut_t1s3o"]
-events = [SubResource("InputEventKey_flmsc"), SubResource("InputEventKey_thxl2")]
 
 [node name="Start_Menu" type="Control"]
 layout_mode = 3
@@ -188,17 +175,8 @@ layout_mode = 2
 theme = ExtResource("5_xckad")
 shortcut = SubResource("Shortcut_51m77")
 shortcut_in_tooltip = false
-text = "2) 返回监狱"
-flat = true
-
-[node name="Button_Exit" type="Button" parent="MarginContainer/FunctionBar"]
-layout_mode = 2
-theme = ExtResource("5_xckad")
-shortcut = SubResource("Shortcut_t1s3o")
-shortcut_in_tooltip = false
-text = "3) 退出"
+text = "2) 退出"
 flat = true
 
 [connection signal="pressed" from="MarginContainer/FunctionBar/Button_Wakeup" to="." method="_on_button_wakeup_pressed"]
 [connection signal="pressed" from="MarginContainer/FunctionBar/Button_Continue" to="." method="_on_button_continue_pressed"]
-[connection signal="pressed" from="MarginContainer/FunctionBar/Button_Exit" to="." method="_on_button_exit_pressed"]

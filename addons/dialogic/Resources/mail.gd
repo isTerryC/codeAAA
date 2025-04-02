@@ -3,8 +3,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	var mail: VBoxContainer = $BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer
+	mail._changeVisibility(G.flag)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -22,3 +22,10 @@ func _on_mail_01_pressed() -> void:
 
 func _on_mail_02_pressed() -> void:
 	_ChangeScene("02")
+
+
+func _on_button_escape_pressed() -> void:
+	if(G.flag!=0):
+		get_tree().change_scene_to_file("res://Clash/Scenes/UI/main.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode-message.tscn")

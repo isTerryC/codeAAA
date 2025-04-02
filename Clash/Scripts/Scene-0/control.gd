@@ -15,12 +15,7 @@ func _on_button_wakeup_pressed() -> void:
 
 #按下 2 按钮	
 func _on_button_continue_pressed() -> void:
-	print("进入设置")
-
-#按下 3 按钮
-func _on_button_exit_pressed() -> void:
-	get_tree().quit() #退出游戏
-
+	get_tree().quit() 
 
 func start_game():
 	

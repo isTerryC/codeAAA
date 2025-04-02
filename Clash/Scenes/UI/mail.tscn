@@ -191,3 +191,4 @@ flat = true
 
 [connection signal="pressed" from="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer/Mail_01" to="." method="_on_mail_01_pressed"]
 [connection signal="pressed" from="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer/Mail_02" to="." method="_on_mail_02_pressed"]
+[connection signal="pressed" from="BorderLine/Label_Down/MarginContainer/FunctionBar/Button_Escape" to="." method="_on_button_escape_pressed"]

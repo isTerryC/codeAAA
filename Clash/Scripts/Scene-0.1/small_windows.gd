@@ -11,7 +11,6 @@ func _ready():
 	
 	# 自动开始弹出流程
 	await get_tree().create_timer(0.1).timeout  # 等待一帧确保初始化完成
-	show_popup()
 
 # 显示弹窗
 func show_popup(text: String = "", display_time: float = 2.0):
