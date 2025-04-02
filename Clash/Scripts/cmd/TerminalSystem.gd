@@ -11,6 +11,7 @@ class FileSystemNode:
 
 var fs_root: FileSystemNode
 var current_path: Array = []  # 当前路径，例如 ["home", "user"]
+var hostname: String = "K"
 
 var current_config_path: String = ""  # 记录当前配置文件路径
 #res://files/filesystem.json
@@ -109,6 +110,8 @@ func execute_command(cmd: String) -> String:
 			return handle_hack(args)
 		"connect":
 			return handle_connect(args)
+		"scan":
+			return handle_scan(args)
 		_:
 			return "Command not found: %s" % args[0]
 
@@ -196,13 +199,22 @@ func handle_connect(args: Array) -> String:
 func _deferred_IP_change(IPs: String) -> bool:
 	match IPs:
 		"1337.1337.1337.1337":
+			hostname = "D"
 			load_filesystem("res://files/D.json")
 			return true
 		"locel":
+			hostname = "K"
 			load_filesystem("res://files/filesystem.json")
 			return true
 		_:
 			return false
+
+func handle_scan(args: Array) -> String:
+	var flag : int = 1
+	if(not flag == 1):
+		return "none"
+	else:
+		return "connected by 1337.1337.1337.1337"
 
 # --- 辅助函数 ---
 # 解析路径（支持相对路径和绝对路径）

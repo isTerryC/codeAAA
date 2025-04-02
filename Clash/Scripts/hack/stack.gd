@@ -16,30 +16,73 @@ var current_state = GameState.INPUT
 
 func _ready():
 	# 初始化 UI
-	$RichTextLabel.text = "Enter your payload (%19$p to leak libc)\n"
-	$LineEdit.grab_focus()  # 自动聚焦到输入框
-
-	# 监听回车键（不需要按钮）
+	$RichTextLabel.bbcode_enabled = true
+	$RichTextLabel.text = ""
+	$LineEdit.grab_focus()
 	$LineEdit.connect("text_submitted", Callable(self, "_on_LineEdit_text_submitted"))
+	await show_guided_messages([
+		"好了，现在应该发过去了。",
+		"左边是我搜集的源代码，一个简单的fmt漏洞",
+		"真不知道设计者怎么想的，输入了姓名还要返回显示一遍",
+		"不管怎么说，输入%19$p，你的任务就完成了。",
+		"我远程没办法泄露你连接的libc"
+	], 1.0)
 
-# 当用户按下回车时触发
+# 文本提交处理
 func _on_LineEdit_text_submitted(input_text):
-	$LineEdit.text = ""  # 清空输入框
+	$LineEdit.text = ""
 	
 	match current_state:
 		GameState.INPUT:
 			if input_text == "%19$p":
-				# 模拟泄露 libc 地址
-				leaked_address = libc_base + 0x1234
-				$RichTextLabel.text += "Leaked address: 0x%x\n" % leaked_address
-				$RichTextLabel.text += "Now calculate system() and /bin/sh addresses!\n"
-				current_state = GameState.WIN
+				start_leak_sequence()
 			else:
-				$RichTextLabel.text += "Invalid payload! Try %19$p\n"
-		
-		GameState.WIN:
-			$RichTextLabel.text += "[color=green]> Challenge completed![/color]\n"
+				show_error()
 
+# 开始泄露流程
+func start_leak_sequence():
+	# 禁用输入
+	$LineEdit.editable = false
+	
+	# 立即显示泄露信息
+	leaked_address = libc_base + 0x1234
+	append_message("[color=yellow]Leaked address: 0x%x[/color]" % leaked_address)
+	
+	# 延时显示后续提示
+	await show_guided_messages([
+		"Analyzing memory layout...",
+		"Calculating libc base address...",
+		"[color=yellow]Hint: system @ 0x%x[/color]" % (libc_base + libc_system_offset),
+		"[color=yellow]Hint: /bin/sh @ 0x%x[/color]" % (libc_base + libc_binsh_offset),
+		"Now build your ROP chain!",
+		"哦，那是我原本的代码，不必在意。"
+	], 1.0)
+	
+	await show_guided_messages([
+		"稍等片刻",
+		"好了"
+	], 2.0)
+	
+	# 重新启用输入（如果需要继续）
+	$LineEdit.editable = true
+	current_state = GameState.WIN
+
+# 分步显示引导信息
+func show_guided_messages(messages: Array, interval: float) -> void:
+	for msg in messages:
+		await get_tree().create_timer(interval).timeout
+		append_message(msg)
+
+# 添加带自动滚动的消息
+func append_message(text: String) -> void:
+	$RichTextLabel.append_text(text + "\n")
+	# 滚动到底部
+	await get_tree().process_frame
+	$RichTextLabel.scroll_to_line($RichTextLabel.get_line_count() - 1)
+
+# 显示错误信息
+func show_error():
+	append_message("[color=red]Invalid payload! Try %19$p[/color]")
 
 func _on_button_exit_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Clash/Scenes/cmd/cmd.tscn")

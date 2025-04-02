@@ -44,7 +44,7 @@ func update_prompt():
 	var path_str = "/".join(terminal_system.current_path)
 	if path_str.is_empty():
 		path_str = "/"
-	path_label.text = "user@hackeros:%s$ " % path_str
+	path_label.text = "user@%s:%s$ " % [terminal_system.hostname, path_str]
 
 func _on_button_exit_pressed() -> void:
 	get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode.tscn")
