@@ -27,7 +27,10 @@ func _on_mail_03_pressed() -> void:
 
 
 func _on_button_escape_pressed() -> void:
-	get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode-message.tscn")
+	if(G.end):
+		get_tree().change_scene_to_file("res://Clash/Scenes/boss/end.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode-message.tscn")
 
 
 func _on_mail_04_pressed() -> void:
@@ -39,3 +42,7 @@ func _on_mail_05_pressed() -> void:
 
 func _on_mail_06_pressed() -> void:
 	_ChangeScene("06")
+
+
+func _on_mail_07_pressed() -> void:
+	_ChangeScene("07")

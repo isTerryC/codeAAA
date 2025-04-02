@@ -18,7 +18,7 @@ func load_hack_scene(port: int) -> void:
 		21:
 			scene_path = "res://Clash/Scenes/boss/stack1.tscn"
 		22:
-			scene_path = "res://Clash/Scenes/boss/node_2d.tscn"
+			scene_path = "res://Clash/Scenes/boss/none.tscn"
 		_:
 			push_error("未知端口：%d" % port)
 			return
@@ -50,11 +50,14 @@ signal flag_changed
 	
 var flag:int = -1
 var c: int = 0
+var end: int = 0
 	
 func update_flag(new_flag: int) -> void:
 	flag = new_flag
 	c = 0
 	# 当 flag 变化时，发出信号
+	if flag == 6:
+		end = 1
 	flag_changed.emit()
 	
 func add_c() -> void:

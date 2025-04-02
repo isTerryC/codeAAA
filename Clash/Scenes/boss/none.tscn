@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1fiuhvlfm4wk"]
+
+[ext_resource type="Script" uid="uid://hitx34olnwq3" path="res://Clash/Scripts/hack/none.gd" id="1_4vdki"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4y4p"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxbk"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[node name="MAIN" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4vdki")
+
+[node name="BorderLine" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label_Up" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_y4y4p")
+
+[node name="MainUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="BackGround" type="Panel" parent="MainUI"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ekxbk")

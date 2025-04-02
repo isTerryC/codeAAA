@@ -85,7 +85,7 @@ func _ready():
 
 	# 创建游戏提示标签，放在矩阵右侧
 	game_tip_label = Label.new()
-	game_tip_label.text = "游戏开始！点击数字。\n规则：从第一个数开始，然后随机数串下一个数在该行寻\n找并点击，下一个数在上一个数的所在列寻找并点击，\n下一个再次变为行内寻找，如此往复。"
+	game_tip_label.text = "开始爆破canary！点击数字。\n规则：从第一个数开始，然后随机数串下一个数在该行寻\n找并点击，下一个数在上一个数的所在列寻找并点击，\n下一个再次变为行内寻找，如此往复。"
 	game_tip_label.position = Vector2(COLS * BUTTON_SIZE + 40, 0)  # 将提示放在矩阵右侧
 	game_tip_label.custom_minimum_size = Vector2(300, 40)  # 设置提示的宽度
 	game_tip_label.add_theme_font_override("font", custom_font)  # 使用自定义字体
@@ -182,6 +182,10 @@ func _on_button_pressed(row, col):
 		if current_index == RANDOM_STR_LENGTH:
 			print("游戏完成！")
 			show_game_over("恭喜！你完成了游戏！")
+			if(G.flag<6):
+				G.update_flag(6)
+				G.set_scannable_temporary()
+			get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode-message.tscn")
 			return
 	else:
 		# 如果玩家点击错误，增加错误计数
@@ -192,6 +196,7 @@ func _on_button_pressed(row, col):
 		if error_count >= MAX_ERRORS:
 			print("错误次数达到限制，游戏失败！")
 			show_game_over("游戏失败！")
+			get_tree().change_scene_to_file("res://Clash/Scenes/cmd/cmd.tscn")
 			return
 
 # 更新游戏提示
