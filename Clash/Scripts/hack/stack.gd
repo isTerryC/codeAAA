@@ -24,8 +24,9 @@ func _ready():
 		"好了，现在应该发过去了。",
 		"左边是我搜集的源代码，一个简单的fmt漏洞",
 		"真不知道设计者怎么想的，输入了姓名还要返回显示一遍",
-		"不管怎么说，输入%19$p，你的任务就完成了。",
-		"我远程没办法泄露你连接的libc"
+		"不管怎么说，输入%49$p，你的任务就完成了。",
+		"我远程没办法泄露你连接的libc",
+		"这步实际上就是在泄露你的_libc_start_main的地址"
 	], 1.0)
 
 # 文本提交处理
@@ -34,7 +35,7 @@ func _on_LineEdit_text_submitted(input_text):
 	
 	match current_state:
 		GameState.INPUT:
-			if input_text == "%19$p":
+			if input_text == "%49$p":
 				start_leak_sequence()
 			else:
 				show_error()

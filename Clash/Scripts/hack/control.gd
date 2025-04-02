@@ -168,11 +168,11 @@ func _on_button_pressed(row, col):
 	# 恢复之前标记的行列颜色
 	reset_marked_row_and_col()
 
-	# 标记点击的行列，变色
-	mark_row_and_col(row, col)
 
 	# 判断玩家是否点击了正确的数字
 	if clicked_value == target_value:
+			# 标记点击的行列，变色
+		mark_row_and_col(row, col)
 		print("点击正确！")
 		# 提示玩家当前目标正确
 		update_game_tip("点击正确！你已点击第 " + str(current_index + 1) + " 个数字，目标是 " + str(target_value))
