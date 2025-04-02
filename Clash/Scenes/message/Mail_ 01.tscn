@@ -1,0 +1,206 @@
+[gd_scene load_steps=11 format=3 uid="uid://qsqaecr5cy8a"]
+
+[ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="1_top2r"]
+[ext_resource type="Theme" uid="uid://br0jxh21imded" path="res://Clash/Themes/select_button.tres" id="2_m1bv8"]
+[ext_resource type="Theme" uid="uid://csgsl6vjl801d" path="res://Clash/Themes/Mail_Themes/Head_text.tres" id="3_fwd07"]
+[ext_resource type="Theme" uid="uid://dc1rq74skik8d" path="res://Clash/Themes/Mail_Themes/Content_text.tres" id="4_ra70r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrlmc"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dw4jd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="InputEventKey" id="InputEventKey_gds8e"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_nujo1"]
+events = [SubResource("InputEventKey_gds8e")]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyfle"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_is7ws"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 6
+
+[node name="Mail_Base" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="BackGround" type="Panel" parent="MainUI"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wrlmc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainUI"]
+visible = false
+layout_mode = 1
+offset_left = 288.0
+offset_top = 192.0
+offset_right = 944.0
+offset_bottom = 480.0
+theme_override_fonts/normal_font = ExtResource("1_top2r")
+theme_override_font_sizes/normal_font_size = 21
+bbcode_enabled = true
+text = "  ,----..     ,--,                                 ,---,     
+ /   /   \\  ,--.'|                               ,--.' |     
+|   :     : |  | :                               |  |  :     
+.   |  ;. / :  : '                    .--.--.    :  :  :     
+.   ; /--`  |  ' |       ,--.--.     /  /    '   :  |  |,--. 
+;   | ;     '  | |      /       \\   |  :  /`./   |  :  '   | 
+|   : |     |  | :     .--.  .-. |  |  :  ;_     |  |   /' : 
+.   | '___  '  : |__    \\__\\/: . .   \\  \\    `.  '  :  | | | 
+'   ; : .'| |  | '.'|   ,\" .--.; |    `----.   \\ |  |  ' | : 
+'   | '/  : ;  :    ;  /  /  ,.  |   /  /`--'  / |  :  :_:,' 
+|   :    /  |  ,   /  ;  :   .'   \\ '--'.     /  |  | ,'     
+ \\   \\ .'    ---`-'   |  ,     .-./   `--'---'   `--''       
+  `---`                `--`---'                           "
+fit_content = true
+autowrap_mode = 0
+
+[node name="BorderLine" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label_Up" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 60.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_dw4jd")
+
+[node name="MarginContainer" type="MarginContainer" parent="BorderLine/Label_Up"]
+z_index = 100
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 60.0
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 28
+
+[node name="FunctionBar" type="HBoxContainer" parent="BorderLine/Label_Up/MarginContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 2
+
+[node name="Head_Label" type="Button" parent="BorderLine/Label_Up/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("2_m1bv8")
+shortcut = SubResource("Shortcut_nujo1")
+text = "信箱"
+flat = true
+
+[node name="Label_Middle" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 1152.0
+offset_bottom = 582.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_vyfle")
+
+[node name="MarginContainer" type="MarginContainer" parent="BorderLine/Label_Middle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 56
+theme_override_constants/margin_top = 56
+theme_override_constants/margin_right = 56
+theme_override_constants/margin_bottom = 56
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BorderLine/Label_Middle/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer"]
+custom_minimum_size = Vector2(950, 410)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Head" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_fwd07")
+text = "标题"
+fit_content = true
+
+[node name="Information" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_ra70r")
+theme_override_font_sizes/normal_font_size = 21
+text = "发自： code-d@psmail.com()"
+fit_content = true
+
+[node name="Content" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_ra70r")
+text = "这是内容
+这是内容
+这是内容
+这是内容
+这是内容
+这是内容
+这是内容"
+fit_content = true
+
+[node name="Content2" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_ra70r")
+text = "署名"
+fit_content = true
+horizontal_alignment = 2
+
+[node name="Label_Down" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_is7ws")
+
+[node name="MarginContainer" type="MarginContainer" parent="BorderLine/Label_Down"]
+z_index = 100
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 66.0
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 1
+
+[node name="FunctionBar" type="HBoxContainer" parent="BorderLine/Label_Down/MarginContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 2
+
+[node name="Button_Escape" type="Button" parent="BorderLine/Label_Down/MarginContainer/FunctionBar"]
+layout_mode = 2
+theme = ExtResource("2_m1bv8")
+shortcut = SubResource("Shortcut_nujo1")
+text = "Esc) 返回"
+flat = true

@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://dkvdqg7gg4au1" path="res://Clash/Themes/head_text.tres" id="2_1anb3"]
 [ext_resource type="Theme" uid="uid://cf8whtktkywed" path="res://Clash/Themes/normal_text.tres" id="2_itjvq"]
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="3_28k14"]
-[ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="4_yvwqi"]
+[ext_resource type="Theme" uid="uid://br0jxh21imded" path="res://Clash/Themes/select_button.tres" id="5_xckad"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgny2"]
 bg_color = Color(0.156863, 0.172549, 0.203922, 1)
@@ -176,7 +176,7 @@ alignment = 2
 [node name="Button_Wakeup" type="Button" parent="MarginContainer/FunctionBar"]
 layout_mode = 2
 tooltip_text = "开始一个新的游戏"
-theme = ExtResource("4_yvwqi")
+theme = ExtResource("5_xckad")
 action_mode = 0
 shortcut = SubResource("Shortcut_ijd5d")
 shortcut_in_tooltip = false
@@ -185,7 +185,7 @@ flat = true
 
 [node name="Button_Continue" type="Button" parent="MarginContainer/FunctionBar"]
 layout_mode = 2
-theme = ExtResource("4_yvwqi")
+theme = ExtResource("5_xckad")
 shortcut = SubResource("Shortcut_51m77")
 shortcut_in_tooltip = false
 text = "2) 返回监狱"
@@ -193,7 +193,7 @@ flat = true
 
 [node name="Button_Exit" type="Button" parent="MarginContainer/FunctionBar"]
 layout_mode = 2
-theme = ExtResource("4_yvwqi")
+theme = ExtResource("5_xckad")
 shortcut = SubResource("Shortcut_t1s3o")
 shortcut_in_tooltip = false
 text = "3) 退出"

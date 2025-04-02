@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://c12gmp76bipnf"]
 
 [ext_resource type="Script" uid="uid://cqgjrp5l461uc" path="res://addons/dialogic/Resources/mail.gd" id="1_eciuk"]
-[ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="1_ysnbm"]
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_f501f"]
+[ext_resource type="Theme" uid="uid://br0jxh21imded" path="res://Clash/Themes/select_button.tres" id="3_60gsm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ew8a"]
 bg_color = Color(0.156863, 0.172549, 0.203922, 1)
@@ -153,7 +153,7 @@ offset_left = 925.0
 offset_top = 594.0
 offset_right = 1133.0
 offset_bottom = 628.0
-theme = ExtResource("1_ysnbm")
+theme = ExtResource("3_60gsm")
 shortcut = SubResource("Shortcut_x6m8l")
 text = "ESC)  返回主界面"
 flat = true

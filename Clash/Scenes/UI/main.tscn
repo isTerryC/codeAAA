@@ -1,9 +1,11 @@
 [gd_scene load_steps=19 format=3 uid="uid://cosl5pqpshv84"]
 
 [ext_resource type="Script" uid="uid://d8wjgd0v0022" path="res://Clash/Scripts/UI/UIManager.gd" id="1_uvvb1"]
-[ext_resource type="PackedScene" uid="uid://cqwjunlehe1t2" path="res://Clash/Scenes/UI/ui_mail.tscn" id="2_mhl0u"]
 [ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="2_w03e6"]
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="3_qua5f"]
+
+[sub_resource type="Resource" id="Resource_x182k"]
+metadata/__load_path__ = "res://Clash/Scenes/UI/Clash/Scenes/UI/ui_mail.tscn"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4y4p"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -73,7 +75,7 @@ events = [SubResource("InputEventKey_gds8e")]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_uvvb1")
-mail_ui = ExtResource("2_mhl0u")
+mail_ui = SubResource("Resource_x182k")
 
 [node name="BorderLine" type="Control" parent="."]
 z_index = 1
