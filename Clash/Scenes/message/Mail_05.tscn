@@ -162,7 +162,7 @@ fit_content = true
 
 [node name="Content" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("5_v3ihu")
+theme = ExtResource("3_hwqtf")
 text = "好了，多谢你帮我这个忙。
 接下来也该带你出去了。
 在命令行输入hack 21

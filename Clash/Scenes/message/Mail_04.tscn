@@ -162,13 +162,13 @@ fit_content = true
 
 [node name="Content" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("5_mwy8b")
+theme = ExtResource("3_14nx7")
 text = "准备好了吗，准备好了我们就去黑进数据库吧。
 在命令行输入hack 143（我更新了你的命令行）
 或者直接点档案也可以。
 你没有账号没关系，用admin账户名
 密码写' OR 1=1'
-你学过SQL，这是知道的
+你学过SQL，应该知道的
 这是SQL注入漏洞"
 fit_content = true
 

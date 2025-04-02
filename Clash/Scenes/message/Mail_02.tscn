@@ -162,7 +162,7 @@ fit_content = true
 
 [node name="Content" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4_sfguk")
+theme = ExtResource("2_nmbq0")
 text = "K囚犯，今天是你作为监狱信息系统处理员的第一天，先看看系统吧。
 记住，帮助狱警们使用电脑完成工作是你的任务。"
 fit_content = true

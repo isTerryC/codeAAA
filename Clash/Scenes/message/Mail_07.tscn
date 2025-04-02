@@ -162,7 +162,7 @@ fit_content = true
 
 [node name="Content" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("5_lt1u7")
+theme = ExtResource("3_q7rae")
 text = "我的任务完成了。
 快走吧，接下来我要删除所有的邮件了，该走了。"
 fit_content = true
