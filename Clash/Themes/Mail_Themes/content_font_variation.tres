@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://uue8yf2qg1by"]
+
+[ext_resource type="FontVariation" uid="uid://24x0erltfr80" path="res://Clash/Themes/select_button_fv.tres" id="1_t8342"]
+
+[resource]
+base_font = ExtResource("1_t8342")
+spacing_glyph = 4
+spacing_top = 10
