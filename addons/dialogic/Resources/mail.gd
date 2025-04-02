@@ -32,3 +32,10 @@ func _on_button_escape_pressed() -> void:
 
 func _on_mail_04_pressed() -> void:
 	_ChangeScene("04")
+
+func _on_mail_05_pressed() -> void:
+	_ChangeScene("05")
+
+
+func _on_mail_06_pressed() -> void:
+	_ChangeScene("06")

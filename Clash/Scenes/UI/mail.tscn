@@ -175,6 +175,18 @@ theme = ExtResource("2_wrlmc")
 text = "准备好了吗"
 alignment = 0
 
+[node name="Mail_05" type="Button" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("2_wrlmc")
+alignment = 0
+
+[node name="Mail_06" type="Button" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("2_wrlmc")
+alignment = 0
+
 [node name="Label_Down" type="Label" parent="BorderLine"]
 layout_mode = 0
 offset_top = 582.0
@@ -207,4 +219,6 @@ flat = true
 [connection signal="pressed" from="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer/Mail_02" to="." method="_on_mail_02_pressed"]
 [connection signal="pressed" from="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer/Mail_03" to="." method="_on_mail_03_pressed"]
 [connection signal="pressed" from="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer/Mail_04" to="." method="_on_mail_04_pressed"]
+[connection signal="pressed" from="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer/Mail_05" to="." method="_on_mail_05_pressed"]
+[connection signal="pressed" from="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer/Mail_06" to="." method="_on_mail_06_pressed"]
 [connection signal="pressed" from="BorderLine/Label_Down/MarginContainer/FunctionBar/Button_Escape" to="." method="_on_button_escape_pressed"]

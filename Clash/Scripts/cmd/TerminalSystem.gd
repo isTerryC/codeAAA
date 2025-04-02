@@ -182,6 +182,10 @@ func _deferred_scene_change(port: String) -> void:
 	match port:
 		"143":
 			get_tree().change_scene_to_file("res://Clash/Scenes/boss/SQL.tscn")
+		"21":
+			get_tree().change_scene_to_file("res://Clash/Scenes/boss/stack1.tscn")
+		"22":
+			get_tree().change_scene_to_file("res://Clash/Scenes/boss/node_2d.tscn")
 
 var IPS: Array = ["1337.1337.1337.1337"]
 

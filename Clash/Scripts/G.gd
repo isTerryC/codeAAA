@@ -15,6 +15,10 @@ func load_hack_scene(port: int) -> void:
 	match port:
 		143:
 			scene_path = "res://Clash/Scenes/boss/SQL.tscn"
+		21:
+			scene_path = "res://Clash/Scenes/boss/stack1.tscn"
+		22:
+			scene_path = "res://Clash/Scenes/boss/node_2d.tscn"
 		_:
 			push_error("未知端口：%d" % port)
 			return

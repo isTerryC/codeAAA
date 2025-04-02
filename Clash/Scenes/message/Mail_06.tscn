@@ -1,10 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://6wgl0fn3e3y7"]
+[gd_scene load_steps=12 format=3 uid="uid://b53e0ep678tpg"]
 
-[ext_resource type="Script" uid="uid://dhnouna386157" path="res://Clash/Scenes/message/Mail_Content.gd" id="1_l5mqm"]
-[ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_ji72k"]
-[ext_resource type="Theme" uid="uid://br0jxh21imded" path="res://Clash/Themes/select_button.tres" id="3_hwqtf"]
-[ext_resource type="Theme" uid="uid://csgsl6vjl801d" path="res://Clash/Themes/Mail_Themes/Head_text.tres" id="4_np1mm"]
-[ext_resource type="Theme" uid="uid://dc1rq74skik8d" path="res://Clash/Themes/Mail_Themes/Content_text.tres" id="5_v3ihu"]
+[ext_resource type="Script" uid="uid://dhnouna386157" path="res://Clash/Scenes/message/Mail_Content.gd" id="1_u0c5x"]
+[ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_0omi4"]
+[ext_resource type="Theme" uid="uid://br0jxh21imded" path="res://Clash/Themes/select_button.tres" id="3_b3a1p"]
+[ext_resource type="Theme" uid="uid://csgsl6vjl801d" path="res://Clash/Themes/Mail_Themes/Head_text.tres" id="4_emvom"]
+[ext_resource type="Theme" uid="uid://dc1rq74skik8d" path="res://Clash/Themes/Mail_Themes/Content_text.tres" id="5_bgfyt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrlmc"]
 bg_color = Color(0.156863, 0.172549, 0.203922, 1)
@@ -44,7 +44,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_l5mqm")
+script = ExtResource("1_u0c5x")
 
 [node name="MainUI" type="Control" parent="."]
 layout_mode = 3
@@ -65,7 +65,7 @@ offset_left = 288.0
 offset_top = 192.0
 offset_right = 944.0
 offset_bottom = 480.0
-theme_override_fonts/normal_font = ExtResource("2_ji72k")
+theme_override_fonts/normal_font = ExtResource("2_0omi4")
 theme_override_font_sizes/normal_font_size = 21
 bbcode_enabled = true
 text = "  ,----..     ,--,                                 ,---,     
@@ -113,7 +113,7 @@ alignment = 2
 
 [node name="Head_Label" type="Button" parent="BorderLine/Label_Up/MarginContainer/FunctionBar"]
 layout_mode = 2
-theme = ExtResource("3_hwqtf")
+theme = ExtResource("3_b3a1p")
 shortcut = SubResource("Shortcut_nujo1")
 text = "信箱"
 flat = true
@@ -149,29 +149,30 @@ theme_override_constants/separation = 15
 
 [node name="Head" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4_np1mm")
-text = "我们去改监控"
+theme = ExtResource("4_emvom")
+text = "出事了"
 fit_content = true
 
 [node name="Information" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("5_v3ihu")
+theme = ExtResource("5_bgfyt")
 theme_override_font_sizes/normal_font_size = 21
 text = "发自： D"
 fit_content = true
 
 [node name="Content" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("5_v3ihu")
-text = "好了，多谢你帮我这个忙。
-接下来也该带你出去了。
-在命令行输入hack 21
-我带你进攻ftp端口，我会通过这个更改监控摄像。"
+theme = ExtResource("5_bgfyt")
+text = "出事了，监狱要更新防火墙了。我们得加速了。
+现在得去进攻大门了，我带你出去。
+他们更新了最新的防栈溢出工具canary
+又叫金丝雀，我们只能试着暴力破解了。
+试试hack 22的ssh吧"
 fit_content = true
 
 [node name="Content2" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("5_v3ihu")
+theme = ExtResource("5_bgfyt")
 text = "D"
 fit_content = true
 horizontal_alignment = 2
@@ -199,7 +200,7 @@ alignment = 2
 
 [node name="Button_Escape" type="Button" parent="BorderLine/Label_Down/MarginContainer/FunctionBar"]
 layout_mode = 2
-theme = ExtResource("3_hwqtf")
+theme = ExtResource("3_b3a1p")
 shortcut = SubResource("Shortcut_nujo1")
 text = "Esc) 返回"
 flat = true

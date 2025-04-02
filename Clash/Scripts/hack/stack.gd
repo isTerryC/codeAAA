@@ -63,9 +63,10 @@ func start_leak_sequence():
 		"好了"
 	], 2.0)
 	
-	# 重新启用输入（如果需要继续）
-	$LineEdit.editable = true
-	current_state = GameState.WIN
+	if(G.flag<5):
+		G.update_flag(5)
+		G.set_scannable_temporary()
+	get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode-message.tscn")
 
 # 分步显示引导信息
 func show_guided_messages(messages: Array, interval: float) -> void:
