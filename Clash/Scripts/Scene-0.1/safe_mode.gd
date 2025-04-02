@@ -38,3 +38,7 @@ func _on_button_network_pressed() -> void:
 		get_tree().change_scene_to_file("res://Clash/Scenes/cmd/scan.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Clash/Scenes/cmd/scan_none.tscn")
+
+
+func _on_button_archive_pressed() -> void:
+	get_tree().change_scene_to_file("res://Clash/Scenes/boss/SQL.tscn")

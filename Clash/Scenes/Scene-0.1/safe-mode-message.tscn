@@ -203,6 +203,7 @@ offset_bottom = 64.0
 theme_override_font_sizes/font_size = 40
 text = "您有新的邮件"
 
+[connection signal="pressed" from="MainUI/MarginContainer/FunctionBar/Button_Archive" to="." method="_on_button_archive_pressed"]
 [connection signal="pressed" from="MainUI/MarginContainer/FunctionBar/Button_Mailbox" to="." method="_on_button_mailbox_pressed"]
 [connection signal="pressed" from="MainUI/MarginContainer/FunctionBar/Button_Network" to="." method="_on_button_network_pressed"]
 [connection signal="pressed" from="MainUI/MarginContainer/FunctionBar/Button_Command" to="." method="_on_button_command_pressed"]

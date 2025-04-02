@@ -27,9 +27,12 @@ func _on_login_pressed():
 	
 	# 检测是否存在SQL注入特征
 	if is_sql_injection(password):
-		status_label.text = "登录成功！（通过SQL注入）"
+		status_label.text = "登录成功！"
 		status_label.add_theme_color_override("font_color", Color.GREEN)
-		# 这里可以跳转到主场景
+		if(G.flag<4):
+			G.update_flag(4)
+			G.set_scannable_temporary()
+		get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode-message.tscn")
 		return
 	
 	# 正常验证流程
