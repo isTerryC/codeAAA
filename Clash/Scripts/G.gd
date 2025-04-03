@@ -51,6 +51,7 @@ signal flag_changed
 var flag:int = -1
 var c: int = 0
 var end: int = 0
+var hide: int = 0
 	
 func update_flag(new_flag: int) -> void:
 	flag = new_flag
@@ -62,6 +63,9 @@ func update_flag(new_flag: int) -> void:
 	
 func add_c() -> void:
 	c = 1
+	
+func find_hide() -> void:
+	hide = 1
 	
 var scannable := 0
 var _scannable_timer: Timer = null

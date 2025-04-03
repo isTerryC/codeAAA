@@ -27,8 +27,11 @@ func _on_mail_03_pressed() -> void:
 
 
 func _on_button_escape_pressed() -> void:
-	if(G.end):
-		get_tree().change_scene_to_file("res://Clash/Scenes/boss/end.tscn")
+	if(G.end != 0):
+		if(G.hide):
+			get_tree().change_scene_to_file("res://Clash/Scenes/ending/end2.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Clash/Scenes/ending/end1.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode-message.tscn")
 

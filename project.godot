@@ -22,7 +22,7 @@ G="*res://Clash/Scripts/G.gd"
 [display]
 
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/aspect="ignore"
 
 [editor]
 

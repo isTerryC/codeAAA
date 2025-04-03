@@ -50,4 +50,4 @@ func is_sql_injection(input: String) -> bool:
 	return regex.search(input) != null
 
 func _on_button_exit_pressed() -> void:
-	get_tree().change_scene_to_file("res://Clash/Scenes/cmd/cmd.tscn")
+	get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode-message.tscn")

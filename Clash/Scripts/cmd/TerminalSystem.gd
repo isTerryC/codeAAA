@@ -102,7 +102,10 @@ func execute_command(cmd: String) -> String:
 		"cat":
 			return handle_cat(args)
 		"man":
-			return "Available commands: ls, cd, cat, man, clear, hack"
+			if hostname == "K":
+				return "Available commands: ls, cd, cat, man, clear, hack ,connect"
+			else:
+				return "Available commands: ls, cd, cat, man, clear, hack ,connect ,scp"
 		"clear":
 			emit_signal("clear_requested")  # 触发清除信号
 			return ""  # 返回空字符串，不在终端显示内容
@@ -112,6 +115,11 @@ func execute_command(cmd: String) -> String:
 			return handle_connect(args)
 		"scan":
 			return handle_scan(args)
+		"scp":
+			if hostname == "K":
+				return "Command not found: %s" % args[0]
+			else:
+				return handle_scp(args)
 		_:
 			return "Command not found: %s" % args[0]
 
@@ -214,11 +222,19 @@ func _deferred_IP_change(IPs: String) -> bool:
 			return false
 
 func handle_scan(args: Array) -> String:
-	var flag : int = 1
-	if(not flag == 1):
+	if(not G.scannable):
 		return "none"
 	else:
 		return "connected by 1337.1337.1337.1337"
+
+func handle_scp(args: Array) -> String:
+	if args.size() < 2:
+		return "Usage: scp <file>"
+	var file_node = find_file(args[1])
+	if not file_node or file_node.type != "file":
+		return "Error: File not found"
+	G.find_hide()
+	return "file have been downloaded."
 
 # --- 辅助函数 ---
 # 解析路径（支持相对路径和绝对路径）
