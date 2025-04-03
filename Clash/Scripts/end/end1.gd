@@ -15,7 +15,7 @@ func _on_animation_player_animation_finished(anim_name):
 		current_index += 1
 		if current_index >= texts.size():
 			# 停止动画播放，退出程序或进行其他操作
-			get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0/control.tscn")
+			get_tree().change_scene_to_file("res://Clash/Scenes/ending/ending-screen.tscn")
 			# 或者，您可以在此进行其他操作
 		else:
 			$Label.text = texts[current_index]

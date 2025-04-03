@@ -1,0 +1,252 @@
+[gd_scene load_steps=15 format=3 uid="uid://c7wr6y1ory2ml"]
+
+[ext_resource type="Script" uid="uid://b4eajh5lry3k2" path="res://Clash/Scripts/end/ending_screen.gd" id="1_22m6e"]
+[ext_resource type="Theme" uid="uid://cf8whtktkywed" path="res://Clash/Themes/normal_text.tres" id="2_qmekm"]
+[ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="3_wbjee"]
+[ext_resource type="Texture2D" uid="uid://b6klatoi0xa65" path="res://Clash/Pics/alex.jpg" id="4_bv4ao"]
+[ext_resource type="Texture2D" uid="uid://c1522fgnfv1pr" path="res://Clash/Pics/Terry.jpg" id="5_b50sk"]
+[ext_resource type="Texture2D" uid="uid://gu8dhi17bwhc" path="res://Clash/Pics/l1002.png" id="6_bqt6d"]
+[ext_resource type="Texture2D" uid="uid://dya8mnk0u1sho" path="res://Clash/Pics/CJX.png" id="7_2glqg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qni2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mh2xp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 3
+
+[sub_resource type="FontVariation" id="FontVariation_mu615"]
+base_font = ExtResource("3_wbjee")
+variation_transform = Transform2D(1, 0.455, 0, 1, 0, 0)
+spacing_glyph = 10
+
+[sub_resource type="FontVariation" id="FontVariation_rqd5g"]
+base_font = ExtResource("3_wbjee")
+spacing_glyph = 8
+
+[sub_resource type="FontVariation" id="FontVariation_0d4m3"]
+base_font = ExtResource("3_wbjee")
+variation_transform = Transform2D(0.8, 0, 0, 1, 0, 0)
+spacing_glyph = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vn7ju"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4ee1"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[node name="Ending-screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_22m6e")
+
+[node name="BorderLine" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label_Up" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 60.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1qni2")
+
+[node name="Label_Middle" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 1152.0
+offset_bottom = 582.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_mh2xp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BorderLine/Label_Middle"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.4
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_qmekm")
+theme_override_fonts/normal_font = SubResource("FontVariation_mu615")
+theme_override_font_sizes/normal_font_size = 51
+bbcode_enabled = true
+text = "[center]再见...[/center]
+"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="BorderLine/Label_Middle"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.42
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_qmekm")
+theme_override_fonts/normal_font = SubResource("FontVariation_rqd5g")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[center]用户K[/center]
+"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="BorderLine/Label_Middle"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.48
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_qmekm")
+theme_override_fonts/normal_font = SubResource("FontVariation_0d4m3")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]欢迎再次使用本终端！[/center]
+"
+
+[node name="Author" type="RichTextLabel" parent="BorderLine/Label_Middle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 624.0
+offset_top = 84.0
+offset_right = -49.0
+offset_bottom = -374.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+theme = ExtResource("2_qmekm")
+theme_override_fonts/normal_font = SubResource("FontVariation_rqd5g")
+theme_override_font_sizes/normal_font_size = 56
+bbcode_enabled = true
+text = "制作成员"
+
+[node name="Sprite2D" type="Sprite2D" parent="BorderLine/Label_Middle"]
+position = Vector2(118, 170)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_bv4ao")
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="BorderLine/Label_Middle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.5
+offset_top = 168.0
+offset_right = -496.5
+offset_bottom = -290.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+theme = ExtResource("2_qmekm")
+theme_override_fonts/normal_font = SubResource("FontVariation_rqd5g")
+theme_override_font_sizes/normal_font_size = 56
+bbcode_enabled = true
+text = "alexdkfighter"
+
+[node name="Sprite2D5" type="Sprite2D" parent="BorderLine/Label_Middle"]
+position = Vector2(174, 330)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_b50sk")
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="BorderLine/Label_Middle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 232.5
+offset_top = 328.0
+offset_right = -440.5
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+theme = ExtResource("2_qmekm")
+theme_override_fonts/normal_font = SubResource("FontVariation_rqd5g")
+theme_override_font_sizes/normal_font_size = 56
+bbcode_enabled = true
+text = "isTerryC
+"
+
+[node name="Sprite2D6" type="Sprite2D" parent="BorderLine/Label_Middle"]
+position = Vector2(990, 242)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_bqt6d")
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="BorderLine/Label_Middle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 552.0
+offset_top = 244.0
+offset_right = -121.0
+offset_bottom = -214.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+theme = ExtResource("2_qmekm")
+theme_override_fonts/normal_font = SubResource("FontVariation_rqd5g")
+theme_override_font_sizes/normal_font_size = 56
+bbcode_enabled = true
+text = "loser1002
+"
+horizontal_alignment = 2
+
+[node name="Sprite2D7" type="Sprite2D" parent="BorderLine/Label_Middle"]
+position = Vector2(926, 410)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_2glqg")
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="BorderLine/Label_Middle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 488.0
+offset_top = 412.0
+offset_right = -185.0
+offset_bottom = -46.0001
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+theme = ExtResource("2_qmekm")
+theme_override_fonts/normal_font = SubResource("FontVariation_rqd5g")
+theme_override_font_sizes/normal_font_size = 56
+bbcode_enabled = true
+text = "ChennnnJiaxin
+"
+horizontal_alignment = 2
+
+[node name="Label_Down" type="Label" parent="BorderLine"]
+layout_mode = 0
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_vn7ju")
+
+[node name="BackGround" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w4ee1")
+metadata/_edit_lock_ = true

@@ -84,7 +84,7 @@ func append_message(text: String) -> void:
 
 # 显示错误信息
 func show_error():
-	append_message("[color=red]Invalid payload! Try %19$p[/color]")
+	append_message("[color=red]Invalid payload! Try %49$p[/color]")
 
 func _on_button_exit_pressed() -> void:
 	get_tree().change_scene_to_file("res://Clash/Scenes/cmd/cmd.tscn")

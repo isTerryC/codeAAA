@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1fiuhvlfm4wk"]
 
-[ext_resource type="Script" uid="uid://hitx34olnwq3" path="res://Clash/Scripts/hack/none.gd" id="1_4vdki"]
+[ext_resource type="Script" path="res://Clash/Scripts/hack/none.gd" id="1_4vdki"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4y4p"]
 bg_color = Color(0.6, 0.6, 0.6, 0)

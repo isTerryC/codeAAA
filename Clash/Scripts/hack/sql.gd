@@ -16,7 +16,7 @@ func _ready():
 	if not is_inside_tree():
 		await tree_entered
 	print("SQL注入场景已就绪")
-	$VBoxContainer/LoginButton.pressed.connect(_on_login_pressed)
+	$VBoxContainer/MarginContainer/LoginButton.pressed.connect(_on_login_pressed)
 
 func _on_login_pressed():
 	var username = username_input.text

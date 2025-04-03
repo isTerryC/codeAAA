@@ -162,7 +162,7 @@ fit_content = true
 
 [node name="Content" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_m1bv8")
+theme = ExtResource("4_ra70r")
 text = "监狱服务器系统故障，现已全部重启并恢复功能。
 可以正常执行工作。"
 fit_content = true

@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dhua77j1bhcll"]
+[gd_scene load_steps=14 format=3 uid="uid://dhua77j1bhcll"]
 
 [ext_resource type="Script" uid="uid://d1fwy0bgmwxn3" path="res://Clash/Scripts/hack/stack.gd" id="1_d31h7"]
 [ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="2_qvn84"]
+[ext_resource type="FontVariation" uid="uid://uue8yf2qg1by" path="res://Clash/Themes/Mail_Themes/content_font_variation.tres" id="3_we0mm"]
+[ext_resource type="Theme" uid="uid://dc1rq74skik8d" path="res://Clash/Themes/Mail_Themes/Content_text.tres" id="4_qcb8v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgny2"]
 bg_color = Color(0.156863, 0.172549, 0.203922, 1)
@@ -39,6 +41,18 @@ unicode = 51
 
 [sub_resource type="Shortcut" id="Shortcut_t1s3o"]
 events = [SubResource("InputEventKey_flmsc"), SubResource("InputEventKey_thxl2")]
+
+[sub_resource type="FontVariation" id="FontVariation_4t5ev"]
+base_font = ExtResource("3_we0mm")
+spacing_space = -6
+spacing_top = -4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_we0mm"]
+bg_color = Color(0.121569, 0.129412, 0.141176, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
 
 [node name="TerminalUI" type="Control"]
 layout_mode = 3
@@ -106,14 +120,15 @@ flat = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 71.0
-offset_top = 78.0
-offset_right = 545.0
-offset_bottom = 601.0
+offset_left = 16.0
+offset_top = 136.0
+offset_right = 632.0
+offset_bottom = 554.0
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = SubResource("FontVariation_4t5ev")
+theme_override_font_sizes/font_size = 26
 text = "int vuln()
 {
   int result; // eax
@@ -133,18 +148,21 @@ text = "int vuln()
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 584.0
-offset_top = 132.0
-offset_right = 1046.0
-offset_bottom = 465.0
+offset_left = 648.0
+offset_top = 136.0
+offset_right = 1111.0
+offset_bottom = 472.0
+theme = ExtResource("4_qcb8v")
 theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_we0mm")
 
 [node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = 584.0
-offset_top = 472.0
-offset_right = 1047.0
-offset_bottom = 522.0
+offset_left = 648.0
+offset_top = 504.0
+offset_right = 1111.0
+offset_bottom = 554.0
+theme = ExtResource("4_qcb8v")
 theme_override_font_sizes/font_size = 30
 placeholder_text = "输入payload"
 

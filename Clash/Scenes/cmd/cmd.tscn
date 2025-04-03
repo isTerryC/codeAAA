@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dtkreph56ie1w"]
+[gd_scene load_steps=11 format=3 uid="uid://dtkreph56ie1w"]
 
 [ext_resource type="Script" uid="uid://1i03vogi47k3" path="res://Clash/Scripts/cmd/cmd.gd" id="1_l6sdw"]
+[ext_resource type="Theme" uid="uid://tppya45juw36" path="res://Clash/Themes/cmd/cmd_text.tres" id="3_cc724"]
 [ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="5_snch7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgny2"]
@@ -106,14 +107,14 @@ flat = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 6.0
+offset_left = 32.0
 offset_top = 78.0
-offset_right = 1142.0
-offset_bottom = 582.0
+offset_right = 1112.0
+offset_bottom = 568.0
 
 [node name="PathLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme = ExtResource("3_cc724")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -121,10 +122,12 @@ size_flags_vertical = 3
 
 [node name="OutputLabel" type="Label" parent="VBoxContainer/ScrollContainer"]
 layout_mode = 2
+theme = ExtResource("3_cc724")
 theme_override_font_sizes/font_size = 30
 
 [node name="CommandInput" type="LineEdit" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_cc724")
 theme_override_font_sizes/font_size = 30
 
 [connection signal="pressed" from="MarginContainer/FunctionBar/Button_Exit" to="." method="_on_button_exit_pressed"]

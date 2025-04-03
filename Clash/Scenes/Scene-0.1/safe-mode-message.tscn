@@ -1,9 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://cffnmysa5fa1p"]
+[gd_scene load_steps=21 format=3 uid="uid://cffnmysa5fa1p"]
 
 [ext_resource type="Script" uid="uid://bw7m583c1j0br" path="res://Clash/Scripts/Scene-0.1/safe_mode.gd" id="1_6aai6"]
 [ext_resource type="FontFile" uid="uid://c1bh5wpeycudp" path="res://Clash/fonts/Cusong/Chusung-220206.ttf" id="2_67dt6"]
 [ext_resource type="Theme" uid="uid://pfig5buy8wqv" path="res://Clash/Themes/button.tres" id="3_jinbt"]
 [ext_resource type="Script" uid="uid://c3w1dqbw736g7" path="res://Clash/Scripts/Scene-0.1/small_windows.gd" id="4_67dt6"]
+[ext_resource type="Theme" uid="uid://tppya45juw36" path="res://Clash/Themes/cmd/cmd_text.tres" id="5_d7hy2"]
+[ext_resource type="FontVariation" uid="uid://uue8yf2qg1by" path="res://Clash/Themes/Mail_Themes/content_font_variation.tres" id="6_itnxx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6aai6"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -62,6 +64,10 @@ events = [SubResource("InputEventKey_gds8e")]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_itnxx"]
 bg_color = Color(0.144285, 0.163749, 0.192944, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_tx0y0"]
+base_font = ExtResource("6_itnxx")
+spacing_glyph = 5
 
 [node name="Safe-mode" type="Control"]
 layout_mode = 3
@@ -196,10 +202,12 @@ script = ExtResource("4_67dt6")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 14.0
+offset_left = -31.0
 offset_top = 14.0
-offset_right = 114.0
+offset_right = 259.0
 offset_bottom = 64.0
+theme = ExtResource("5_d7hy2")
+theme_override_fonts/font = SubResource("FontVariation_tx0y0")
 theme_override_font_sizes/font_size = 40
 text = "您有新的邮件"
 

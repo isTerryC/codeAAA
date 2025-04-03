@@ -162,7 +162,7 @@ fit_content = true
 
 [node name="Content" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3_b3a1p")
+theme = ExtResource("5_bgfyt")
 text = "出事了，监狱要更新防火墙了。我们得加速了。
 现在得去进攻大门了，我带你出去。
 他们更新了最新的防栈溢出工具canary

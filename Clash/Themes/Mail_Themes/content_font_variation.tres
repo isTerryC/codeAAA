@@ -4,5 +4,6 @@
 
 [resource]
 base_font = ExtResource("1_t8342")
-spacing_glyph = 4
-spacing_top = 10
+spacing_glyph = 1
+spacing_top = 8
+baseline_offset = -0.175

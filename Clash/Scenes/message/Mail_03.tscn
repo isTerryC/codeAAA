@@ -162,7 +162,7 @@ fit_content = true
 
 [node name="Content" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3_mcbtq")
+theme = ExtResource("5_sw101")
 text = "你好K,我是D。
 我知道你是为什么进去的。我是一个黑客。
 我能带你出去。当然，回报是监狱里的信息。
