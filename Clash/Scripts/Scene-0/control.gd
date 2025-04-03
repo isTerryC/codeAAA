@@ -18,5 +18,5 @@ func _on_button_continue_pressed() -> void:
 	get_tree().quit() 
 
 func start_game():
-	
+	G.start_init()
 	get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0/loading.tscn")  # 切换到游戏场景

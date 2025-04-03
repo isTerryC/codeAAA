@@ -53,6 +53,13 @@ var c: int = 0
 var end: int = 0
 var hide: int = 0
 	
+	
+func start_init() -> void:
+	flag = -1
+	c = 0
+	end = 0
+	hide = 0
+
 func update_flag(new_flag: int) -> void:
 	flag = new_flag
 	c = 0

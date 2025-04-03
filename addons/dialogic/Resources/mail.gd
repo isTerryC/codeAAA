@@ -28,7 +28,7 @@ func _on_mail_03_pressed() -> void:
 
 func _on_button_escape_pressed() -> void:
 	if(G.end != 0):
-		if(G.hide):
+		if(G.hide == 1):
 			get_tree().change_scene_to_file("res://Clash/Scenes/ending/end2.tscn")
 		else:
 			get_tree().change_scene_to_file("res://Clash/Scenes/ending/end1.tscn")

@@ -4,6 +4,9 @@ var texts = ["K逃出了监狱", "市长A在K跟D提交的证据下被抓获", "
 var current_index = 0
 
 func _ready():
+	if(G.hide):
+		texts = ["K逃出了监狱", "市长A跟B都在K提交的证据下被抓获", "城市混乱中，D不见了", "K,I‘m D. Welcome to Alex."]
+
 	$Label.text = texts[current_index]
 	$AnimationPlayer.play("fade_animation")
 
