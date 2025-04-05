@@ -68,6 +68,7 @@ func start_leak_sequence():
 		G.update_flag(5)
 		G.set_scannable_temporary()
 	get_tree().change_scene_to_file("res://Clash/Scenes/Scene-0.1/safe-mode-message.tscn")
+	queue_free()
 
 # 分步显示引导信息
 func show_guided_messages(messages: Array, interval: float) -> void:

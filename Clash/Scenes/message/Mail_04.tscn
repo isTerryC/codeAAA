@@ -162,7 +162,7 @@ fit_content = true
 
 [node name="Content" type="RichTextLabel" parent="BorderLine/Label_Middle/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3_14nx7")
+theme = ExtResource("5_mwy8b")
 text = "准备好了吗，准备好了我们就去黑进数据库吧。
 在命令行输入hack 143（我更新了你的命令行）
 或者直接点档案也可以。
